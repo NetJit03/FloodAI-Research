@@ -1,0 +1,30 @@
+
+# Python environments and temporary files
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Credentials and private configuration
+.env
+.env.*
+!.env.example
+*.pem
+*credentials*.json
+*service-account*.json
+
+# Large datasets (adjust names to your actual folders)
+data/raw/
+datasets/
+*.tif
+*.tiff
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt
+
+# Temporary outputs
+.cache/
+tmp/

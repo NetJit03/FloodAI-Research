@@ -1,0 +1,32 @@
+{
+  "status": "DEV_AUDITED_NOT_FROZEN",
+  "n_unique_dev_chips": 243,
+  "n_train_memberships": 588,
+  "folds": {
+    "dev_fold_01_usa": {
+      "train": 174,
+      "valid": 69,
+      "validation_event": "USA"
+    },
+    "dev_fold_02_sri_lanka": {
+      "train": 201,
+      "valid": 42,
+      "validation_event": "Sri-Lanka"
+    },
+    "dev_fold_03_spain": {
+      "train": 213,
+      "valid": 30,
+      "validation_event": "Spain"
+    }
+  },
+  "cases": [
+    "Sri-Lanka_534068_S1Hand.tif",
+    "Sri-Lanka_845821_S1Hand.tif",
+    "Sri-Lanka_713926_S1Hand.tif"
+  ],
+  "m75c_per_image_source": "/Users/netinho/Projects/FloodAI-Research/results/event_level_v2/m75c_sri_lanka_failure_analysis/m75c_per_image.csv",
+  "test_accessed": false,
+  "model_trained": false,
+  "fixed_threshold_from_m75c": 0.5,
+  "candidate_sampler": "UNFROZEN diagnostic only"
+}

@@ -1,0 +1,199 @@
+[
+  {
+    "file": "01_research_title.md",
+    "title": "01 การทำแผนที่น้ำผิวดินข้ามเหตุการณ์ด้วย SAR",
+    "kind": "main",
+    "seconds": 25,
+    "claims": [
+      "C01",
+      "C03"
+    ]
+  },
+  {
+    "file": "02_task_and_questions.md",
+    "title": "02 โจทย์และคำถามวิจัย",
+    "kind": "main",
+    "seconds": 65,
+    "claims": [
+      "C01",
+      "C02"
+    ]
+  },
+  {
+    "file": "03_development_data.md",
+    "title": "03 ข้อมูลและการแบ่งตามเหตุการณ์",
+    "kind": "main",
+    "seconds": 75,
+    "claims": [
+      "C03",
+      "C04",
+      "C05"
+    ]
+  },
+  {
+    "file": "04_actual_model.md",
+    "title": "04 Small U-Net ที่ใช้จริง",
+    "kind": "main",
+    "seconds": 60,
+    "claims": [
+      "C06",
+      "C07"
+    ]
+  },
+  {
+    "file": "05_sampling_methods.md",
+    "title": "05 วิธีเลือกภาพระหว่างฝึก",
+    "kind": "main",
+    "seconds": 75,
+    "claims": [
+      "C08",
+      "C09",
+      "C10"
+    ]
+  },
+  {
+    "file": "06_experiment_and_metric.md",
+    "title": "06 การทดลองและเกณฑ์เปรียบเทียบ",
+    "kind": "main",
+    "seconds": 60,
+    "claims": [
+      "C07",
+      "C11",
+      "C12"
+    ]
+  },
+  {
+    "file": "07_main_sampling_results.md",
+    "title": "07 Sampling ทั้งสองแบบยังไม่เพิ่มคะแนนรวม",
+    "kind": "main",
+    "seconds": 70,
+    "claims": [
+      "C13"
+    ]
+  },
+  {
+    "file": "08_event_and_seed_behavior.md",
+    "title": "08 คะแนนและความผันผวนต่างกันตามเหตุการณ์",
+    "kind": "main",
+    "seconds": 70,
+    "claims": [
+      "C14"
+    ]
+  },
+  {
+    "file": "09_failure_case.md",
+    "title": "09 ตัวอย่างการพลาดน้ำใน Sri Lanka",
+    "kind": "main",
+    "seconds": 65,
+    "claims": [
+      "C15"
+    ]
+  },
+  {
+    "file": "10_ensemble_results.md",
+    "title": "10 ผลของ Baseline Deep Ensemble",
+    "kind": "main",
+    "seconds": 75,
+    "claims": [
+      "C16",
+      "C17"
+    ]
+  },
+  {
+    "file": "11_uncertainty_maps.md",
+    "title": "11 แผนที่ความไม่แน่นอนของ Ensemble",
+    "kind": "main",
+    "seconds": 80,
+    "claims": [
+      "C18",
+      "C19",
+      "C20"
+    ]
+  },
+  {
+    "file": "12_conclusions_and_next_steps.md",
+    "title": "12 ข้อค้นพบและสิ่งที่ต้องยืนยันต่อ",
+    "kind": "main",
+    "seconds": 55,
+    "claims": [
+      "C13",
+      "C14",
+      "C17",
+      "C21",
+      "C22"
+    ]
+  },
+  {
+    "file": "A_training_and_sampling_details.md",
+    "title": "Appendix A รายละเอียดการฝึกและ Sampling",
+    "kind": "appendix",
+    "seconds": 60,
+    "claims": [
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C23"
+    ]
+  },
+  {
+    "file": "B_all_seed_results.md",
+    "title": "Appendix B คะแนนครบ 27 Runs",
+    "kind": "appendix",
+    "seconds": 50,
+    "claims": [
+      "C11",
+      "C14",
+      "C24"
+    ]
+  },
+  {
+    "file": "C_uncertainty_numbers.md",
+    "title": "Appendix C ขอบเขตและผลเชิงตัวเลขของ UQ",
+    "kind": "appendix",
+    "seconds": 60,
+    "claims": [
+      "C18",
+      "C19",
+      "C20"
+    ]
+  },
+  {
+    "file": "D_data_provenance_and_history.md",
+    "title": "Appendix D ที่มาข้อมูลและบทบาทชุดทดสอบ",
+    "kind": "appendix",
+    "seconds": 50,
+    "claims": [
+      "C02",
+      "C03",
+      "C05",
+      "C21",
+      "C22",
+      "C25"
+    ]
+  },
+  {
+    "file": "E_uncertainty_and_metric_equations.md",
+    "title": "Appendix E นิยามเมตริกและความไม่แน่นอน",
+    "kind": "appendix",
+    "seconds": 45,
+    "claims": [
+      "C12",
+      "C18",
+      "C19",
+      "C20"
+    ]
+  },
+  {
+    "file": "F_references.md",
+    "title": "Appendix F เอกสารอ้างอิง",
+    "kind": "appendix",
+    "seconds": 25,
+    "claims": [
+      "C02",
+      "C06",
+      "C16"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+split,sar_image,label_image,reason
+train,Ghana_26376_S1Hand.tif,Ghana_26376_LabelHand.tif,no valid ground-truth pixels (label 0 or 1)
+valid,Ghana_5079_S1Hand.tif,Ghana_5079_LabelHand.tif,no valid ground-truth pixels (label 0 or 1)
+valid,Ghana_234935_S1Hand.tif,Ghana_234935_LabelHand.tif,no valid ground-truth pixels (label 0 or 1)
+valid,Ghana_277_S1Hand.tif,Ghana_277_LabelHand.tif,no valid ground-truth pixels (label 0 or 1)
+test,Ghana_83483_S1Hand.tif,Ghana_83483_LabelHand.tif,no valid ground-truth pixels (label 0 or 1)

@@ -1,0 +1,36 @@
+{
+  "experiment": "M7.5A_V2A_eventbalanced",
+  "smoke": false,
+  "fold": "dev_fold_02_sri_lanka",
+  "seed": 777,
+  "source_root": "/Users/netinho/Projects/FloodAI-Research/data/sen1floods11/v2_development_roots/dev_fold_02_sri_lanka",
+  "n_train": 201,
+  "n_val": 42,
+  "train_events": {
+    "Mekong": 30,
+    "Nigeria": 18,
+    "Pakistan": 28,
+    "Somalia": 26,
+    "Spain": 30,
+    "USA": 69
+  },
+  "validation_events": [
+    "Sri-Lanka"
+  ],
+  "sampler": "probability_per_image = 1/(n_training_events * number_of_images_in_event)",
+  "replacement": true,
+  "draws_per_epoch": 201,
+  "main_change_vs_v1": "TRAIN sampling only, no architecture/loss/preprocessing change",
+  "model_selection": "valid pixel-micro IoU",
+  "threshold": 0.5,
+  "max_epochs": 25,
+  "batch_size": 2,
+  "crop_size": 256,
+  "base_channels": 16,
+  "learning_rate": 0.0003,
+  "patience": 6,
+  "best_dev_iou": 0.3865741973990316,
+  "train_source_sha256": "818a30be6880171509cc721f5436a5500d8b778997ec8f45991636569cae2a55",
+  "v2_source_sha256": "59188b41653dd9280271cdcdbb29beb86b952ae4e20c74c78dd2a9f534fe2e87",
+  "note": "Development validation only, NOT final independent generalization evidence"
+}

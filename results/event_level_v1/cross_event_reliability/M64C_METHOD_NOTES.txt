@@ -1,0 +1,5 @@
+M6.4C: RETROSPECTIVE DIAGNOSTICS ONLY.
+Each event is scored using its own fold-specific checkpoint. Fold-specific training/validation composition differs; the graph is NOT a controlled same-model cross-event comparison.
+No model fitting, recalibration or threshold selection is performed. All event test sets have been inspected in earlier work: do NOT treat these as fresh untouched confirmatory test results for Model V2.
+IoU/recall and ECE are micro-aggregated over evaluable pixels per event. ECE uses equal-width probability bins with occupancy weighting; class imbalance can hide water-class errors.
+Ground-truth labels are the source dataset's labels; not independently field-validated labels. Pixelwise observations are spatially correlated.

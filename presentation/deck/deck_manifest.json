@@ -1,0 +1,678 @@
+{
+  "authoring": "PptxGenJS",
+  "version": "4.0.1",
+  "user_override": "User explicitly approved PptxGenJS in place of the unavailable artifact-tool runtime.",
+  "slides": [
+    {
+      "number": 1,
+      "title": "",
+      "source": "01_research_title.md",
+      "claim_ids": [
+        "C01",
+        "C03"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "โจทย์และคำถามวิจัย",
+      "source": "02_task_and_questions.md",
+      "claim_ids": [
+        "C01",
+        "C02"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "ข้อมูลพัฒนาและการแบ่งตามเหตุการณ์",
+      "source": "03_development_data.md",
+      "claim_ids": [
+        "C03",
+        "C04",
+        "C05"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Small U-Net ที่ใช้จริง",
+      "source": "04_actual_model.md",
+      "claim_ids": [
+        "C06",
+        "C07"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "วิธีเลือกภาพระหว่างฝึก",
+      "source": "05_sampling_methods.md",
+      "claim_ids": [
+        "C08",
+        "C09",
+        "C10"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "การทดลองและเกณฑ์เปรียบเทียบ",
+      "source": "06_experiment_and_metric.md",
+      "claim_ids": [
+        "C07",
+        "C11",
+        "C12"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Sampling ทั้งสองแบบยังไม่เพิ่มคะแนนรวม",
+      "source": "07_main_sampling_results.md",
+      "claim_ids": [
+        "C13"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "คะแนนและความผันผวนต่างกันตามเหตุการณ์",
+      "source": "08_event_and_seed_behavior.md",
+      "claim_ids": [
+        "C14"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Seed 777 พลาดน้ำในภาพ Sri Lanka",
+      "source": "09_failure_case.md",
+      "claim_ids": [
+        "C15"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "ผลของ Baseline Deep Ensemble",
+      "source": "10_ensemble_results.md",
+      "claim_ids": [
+        "C16",
+        "C17"
+      ]
+    },
+    {
+      "number": 11,
+      "title": "แผนที่ความไม่แน่นอนของ Ensemble",
+      "source": "11_uncertainty_maps.md",
+      "claim_ids": [
+        "C18",
+        "C19",
+        "C20"
+      ]
+    },
+    {
+      "number": 12,
+      "title": "ข้อค้นพบและสิ่งที่ต้องยืนยันต่อ",
+      "source": "12_conclusions_and_next_steps.md",
+      "claim_ids": [
+        "C13",
+        "C14",
+        "C17",
+        "C21",
+        "C22"
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Appendix A: รายละเอียดการฝึกและ Sampling",
+      "source": "A_training_and_sampling_details.md",
+      "claim_ids": [
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C23"
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Appendix B: คะแนนครบ 27 Runs",
+      "source": "B_all_seed_results.md",
+      "claim_ids": [
+        "C11",
+        "C14",
+        "C24"
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Appendix C: ผล UQ และขอบเขตตัวอย่าง",
+      "source": "C_uncertainty_numbers.md",
+      "claim_ids": [
+        "C18",
+        "C19",
+        "C20"
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Appendix D: ที่มาข้อมูลและบทบาทชุดทดสอบ",
+      "source": "D_data_provenance_and_history.md",
+      "claim_ids": [
+        "C02",
+        "C03",
+        "C05",
+        "C21",
+        "C22",
+        "C25"
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Appendix E: นิยามเมตริกและความไม่แน่นอน",
+      "source": "E_uncertainty_and_metric_equations.md",
+      "claim_ids": [
+        "C12",
+        "C18",
+        "C19",
+        "C20"
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Appendix F: เอกสารอ้างอิง",
+      "source": "F_references.md",
+      "claim_ids": [
+        "C02",
+        "C06",
+        "C16"
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "slide": 7,
+      "chart_part": "ppt/charts/chart1.xml",
+      "series": [
+        {
+          "name": "Baseline",
+          "labels": [
+            [
+              "Macro DEV Water IoU"
+            ]
+          ],
+          "values": [
+            0.6143297025463857
+          ],
+          "_dataIndex": 0
+        },
+        {
+          "name": "V2-A",
+          "labels": [
+            [
+              "Macro DEV Water IoU"
+            ]
+          ],
+          "values": [
+            0.5979154642385853
+          ],
+          "_dataIndex": 1
+        },
+        {
+          "name": "V2-B",
+          "labels": [
+            [
+              "Macro DEV Water IoU"
+            ]
+          ],
+          "values": [
+            0.587919012101517
+          ],
+          "_dataIndex": 2
+        }
+      ],
+      "error_bars": [
+        [
+          0.05755119056370495
+        ],
+        [
+          0.045740560054730074
+        ],
+        [
+          0.04884912988786312
+        ]
+      ]
+    },
+    {
+      "slide": 8,
+      "chart_part": "ppt/charts/chart2.xml",
+      "series": [
+        {
+          "name": "Baseline",
+          "labels": [
+            [
+              "USA",
+              "Sri Lanka",
+              "Spain"
+            ]
+          ],
+          "values": [
+            0.5383242721839019,
+            0.5988914163811422,
+            0.705773419074113
+          ],
+          "_dataIndex": 0
+        },
+        {
+          "name": "V2-A",
+          "labels": [
+            [
+              "USA",
+              "Sri Lanka",
+              "Spain"
+            ]
+          ],
+          "values": [
+            0.5380542263666261,
+            0.548621644205683,
+            0.7070705221434468
+          ],
+          "_dataIndex": 1
+        },
+        {
+          "name": "V2-B",
+          "labels": [
+            [
+              "USA",
+              "Sri Lanka",
+              "Spain"
+            ]
+          ],
+          "values": [
+            0.5383830080177647,
+            0.509012727773253,
+            0.7163613005135331
+          ],
+          "_dataIndex": 2
+        }
+      ],
+      "error_bars": [
+        [
+          0.010333875657052363,
+          0.18171038512639834,
+          0.011836880538335882
+        ],
+        [
+          0.011591509697578157,
+          0.1491379996670329,
+          0.014012473132377103
+        ],
+        [
+          0.007984864526211487,
+          0.16252283606521364,
+          0.008528279430744232
+        ]
+      ]
+    },
+    {
+      "slide": 10,
+      "chart_part": "ppt/charts/chart3.xml",
+      "series": [
+        {
+          "name": "Mean single-model IoU",
+          "labels": [
+            [
+              "USA",
+              "Sri Lanka",
+              "Spain"
+            ]
+          ],
+          "values": [
+            0.5383242721839019,
+            0.5988914163811422,
+            0.705773419074113
+          ],
+          "_dataIndex": 0
+        },
+        {
+          "name": "IoU of probability ensemble",
+          "labels": [
+            [
+              "USA",
+              "Sri Lanka",
+              "Spain"
+            ]
+          ],
+          "values": [
+            0.5487045779962075,
+            0.685778791486971,
+            0.7105168555559951
+          ],
+          "_dataIndex": 1
+        }
+      ],
+      "error_bars": null
+    }
+  ],
+  "tables": [
+    {
+      "slide": 3,
+      "rows": 4,
+      "columns": 3,
+      "data": [
+        [
+          "Validation event",
+          "TRAIN",
+          "VALID"
+        ],
+        [
+          "USA",
+          174,
+          69
+        ],
+        [
+          "Sri Lanka",
+          201,
+          42
+        ],
+        [
+          "Spain",
+          213,
+          30
+        ]
+      ]
+    },
+    {
+      "slide": 4,
+      "rows": 6,
+      "columns": 2,
+      "data": [
+        [
+          "ส่วนของโมเดล",
+          "Channels"
+        ],
+        [
+          "Input",
+          "2: VV, VH"
+        ],
+        [
+          "Encoder",
+          "16, 32, 64, 128"
+        ],
+        [
+          "Bottleneck",
+          "256"
+        ],
+        [
+          "Decoder + skip connections",
+          "128, 64, 32, 16"
+        ],
+        [
+          "Output",
+          "1 logit ต่อพิกเซล"
+        ]
+      ]
+    },
+    {
+      "slide": 5,
+      "rows": 4,
+      "columns": 2,
+      "data": [
+        [
+          "วิธี",
+          "TRAIN image sampling"
+        ],
+        [
+          "Baseline",
+          "Shuffle โดยไม่เลือกภาพซ้ำภายใน epoch"
+        ],
+        [
+          "V2-A",
+          "ให้แต่ละ event มีโอกาสเท่ากันในความคาดหมาย"
+        ],
+        [
+          "V2-B",
+          "ผสม uniform-image 50%\nกับ uniform-coverage-bin 50%"
+        ]
+      ]
+    },
+    {
+      "slide": 13,
+      "rows": 8,
+      "columns": 2,
+      "data": [
+        [
+          "รายการ",
+          "ค่าที่ใช้"
+        ],
+        [
+          "Loss",
+          "0.5 masked BCE + 0.5 soft Dice"
+        ],
+        [
+          "Optimizer",
+          "AdamW, lr 0.0003, weight decay 0.0001"
+        ],
+        [
+          "Batch / Max epochs / Patience",
+          "2 / 25 / 6"
+        ],
+        [
+          "TRAIN augmentation",
+          "Crop 256, H/V flips, rotations 0/90/180/270°"
+        ],
+        [
+          "VALID",
+          "ภาพเต็ม 512, ไม่มี augmentation"
+        ],
+        [
+          "Normalization preset",
+          "VV [−35, 5], VH [−40, 0], clip แล้ว scale [0, 1]"
+        ],
+        [
+          "Valid pixels",
+          "Label ≠ −1 และ SAR ผ่าน finite/nodata mask"
+        ]
+      ]
+    },
+    {
+      "slide": 14,
+      "rows": 10,
+      "columns": 5,
+      "data": [
+        [
+          "Method",
+          "Seed",
+          "USA",
+          "Sri Lanka",
+          "Spain"
+        ],
+        [
+          "Baseline",
+          42,
+          "0.5289",
+          "0.7065",
+          "0.6940"
+        ],
+        [
+          "Baseline",
+          123,
+          "0.5367",
+          "0.7011",
+          "0.7176"
+        ],
+        [
+          "Baseline",
+          777,
+          "0.5494",
+          "0.3891",
+          "0.7057"
+        ],
+        [
+          "V2-A",
+          42,
+          "0.5442",
+          "0.6801",
+          "0.6910"
+        ],
+        [
+          "V2-A",
+          123,
+          "0.5247",
+          "0.5792",
+          "0.7170"
+        ],
+        [
+          "V2-A",
+          777,
+          "0.5452",
+          "0.3866",
+          "0.7132"
+        ],
+        [
+          "V2-B",
+          42,
+          "0.5292",
+          "0.6839",
+          "0.7068"
+        ],
+        [
+          "V2-B",
+          123,
+          "0.5434",
+          "0.3626",
+          "0.7231"
+        ],
+        [
+          "V2-B",
+          777,
+          "0.5426",
+          "0.4806",
+          "0.7192"
+        ]
+      ]
+    },
+    {
+      "slide": 15,
+      "rows": 4,
+      "columns": 5,
+      "data": [
+        [
+          "DEV event",
+          "Recall",
+          "Brier",
+          "Entropy (bits)",
+          "MI (bits)"
+        ],
+        [
+          "USA",
+          "0.7049",
+          "0.0420",
+          "0.6349",
+          "0.0511"
+        ],
+        [
+          "Sri Lanka",
+          "0.7311",
+          "0.0451",
+          "0.5180",
+          "0.0335"
+        ],
+        [
+          "Spain",
+          "0.8128",
+          "0.0338",
+          "0.2988",
+          "0.0085"
+        ]
+      ]
+    },
+    {
+      "slide": 15,
+      "rows": 4,
+      "columns": 3,
+      "data": [
+        [
+          "พื้นที่ (3 ภาพต่อพื้นที่)",
+          "Entropy capture",
+          "MI capture"
+        ],
+        [
+          "USA",
+          "82.4%",
+          "2.4%"
+        ],
+        [
+          "Sri Lanka",
+          "48.7%",
+          "11.5%"
+        ],
+        [
+          "Spain",
+          "46.4%",
+          "34.5%"
+        ]
+      ]
+    },
+    {
+      "slide": 16,
+      "rows": 8,
+      "columns": 2,
+      "data": [
+        [
+          "DEV event prefix",
+          "Chips"
+        ],
+        [
+          "Mekong",
+          30
+        ],
+        [
+          "Nigeria",
+          18
+        ],
+        [
+          "Pakistan",
+          28
+        ],
+        [
+          "Somalia",
+          26
+        ],
+        [
+          "Spain",
+          30
+        ],
+        [
+          "Sri Lanka",
+          42
+        ],
+        [
+          "USA",
+          69
+        ]
+      ]
+    },
+    {
+      "slide": 16,
+      "rows": 5,
+      "columns": 2,
+      "data": [
+        [
+          "กลุ่มข้อมูล",
+          "บทบาท"
+        ],
+        [
+          "USA / Sri Lanka / Spain",
+          "VALID events ในสาม DEV folds"
+        ],
+        [
+          "India / Paraguay / Ghana",
+          "Historical TEST ที่เคยตรวจแล้ว"
+        ],
+        [
+          "Bolivia",
+          "Holdout เดิมที่เคยตรวจแล้ว"
+        ],
+        [
+          "Thailand Phimai",
+          "Diagnostic pilot; ยังต้องมี aligned GT"
+        ]
+      ]
+    }
+  ]
+}

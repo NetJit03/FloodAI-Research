@@ -1,0 +1,74 @@
+{
+  "status": "DESIGN_READY_V2A_NOT_TRAINED",
+  "main_change": "event-balanced training sampling only",
+  "primary_metric": "mean across 3 events of pixel-micro VALID IoU, then mean across 3 seeds",
+  "seeds": [
+    42,
+    123,
+    777
+  ],
+  "baseline_macro_by_seed": {
+    "42": 0.6431154577548756,
+    "123": 0.6518085393740695,
+    "777": 0.5480651105102121
+  },
+  "baseline_mean": 0.6143297025463857,
+  "baseline_seed_sample_sd": 0.05755119056370495,
+  "folds": [
+    {
+      "fold": "dev_fold_01_usa",
+      "train_images": 174,
+      "valid_images": 69,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "Sri-Lanka"
+      ],
+      "valid_events": [
+        "USA"
+      ],
+      "heldout_test_count": 0,
+      "bolivia_count": 0
+    },
+    {
+      "fold": "dev_fold_02_sri_lanka",
+      "train_images": 201,
+      "valid_images": 42,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "USA"
+      ],
+      "valid_events": [
+        "Sri-Lanka"
+      ],
+      "heldout_test_count": 0,
+      "bolivia_count": 0
+    },
+    {
+      "fold": "dev_fold_03_spain",
+      "train_images": 213,
+      "valid_images": 30,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Sri-Lanka",
+        "USA"
+      ],
+      "valid_events": [
+        "Spain"
+      ],
+      "heldout_test_count": 0,
+      "bolivia_count": 0
+    }
+  ],
+  "prior_test_status": "do not use for experiment selection"
+}

@@ -1,0 +1,139 @@
+{
+  "status": "AUDITED_PROPOSED_NOT_FROZEN",
+  "note": "No model trained. This is NOT independent ground-truth validation.",
+  "unique_development_chips": 243,
+  "development_events": {
+    "Mekong": 30,
+    "Nigeria": 18,
+    "Pakistan": 28,
+    "Somalia": 26,
+    "Spain": 30,
+    "Sri-Lanka": 42,
+    "USA": 69
+  },
+  "folds": [
+    {
+      "fold": "dev_fold_01_usa",
+      "train": 174,
+      "valid": 69,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "Sri-Lanka"
+      ],
+      "valid_events": [
+        "USA"
+      ]
+    },
+    {
+      "fold": "dev_fold_02_sri_lanka",
+      "train": 201,
+      "valid": 42,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "USA"
+      ],
+      "valid_events": [
+        "Sri-Lanka"
+      ]
+    },
+    {
+      "fold": "dev_fold_03_spain",
+      "train": 213,
+      "valid": 30,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Sri-Lanka",
+        "USA"
+      ],
+      "valid_events": [
+        "Spain"
+      ]
+    }
+  ],
+  "total_valid_pixels": 57230284,
+  "total_water_pixels": 6416768,
+  "label_metadata_nodata_zero_count": 0,
+  "label_rule": {
+    "ignore": -1,
+    "land": 0,
+    "water": 1,
+    "important": "Land 0 is valid even if label metadata mistakenly says nodata=0."
+  },
+  "proposed_normalization": {
+    "VV": [
+      -35.0,
+      5.0
+    ],
+    "VH": [
+      -40.0,
+      0.0
+    ],
+    "status": "VERIFY_TIFF_UNITS_AND_TRAINER_SOURCE"
+  },
+  "proposed_training_defaults": {
+    "epochs": {
+      "expected": 25,
+      "found": 25,
+      "matches": true
+    },
+    "batch-size": {
+      "expected": 2,
+      "found": 2,
+      "matches": true
+    },
+    "crop-size": {
+      "expected": 256,
+      "found": 256,
+      "matches": true
+    },
+    "base-channels": {
+      "expected": 16,
+      "found": 16,
+      "matches": true
+    },
+    "lr": {
+      "expected": 0.0003,
+      "found": 0.0003,
+      "matches": true
+    },
+    "patience": {
+      "expected": 6,
+      "found": 6,
+      "matches": true
+    },
+    "seed": {
+      "expected": 42,
+      "found": 42,
+      "matches": true
+    }
+  },
+  "trainer_sha256": "41a09ef9a2c73ebfb6162d6749200645ff8d8b65ea2bf3a8478da91080b7922b",
+  "split_sha256": {
+    "dev_fold_01_usa/train": "efc5b555b947a0b95c9a81ff4797c7ac95a8fde3a51a6e1cc46939f873f72350",
+    "dev_fold_01_usa/valid": "ff0c38367b654b23f31e2fdfa7ca3e4510c3911a8e6ac223d5afe95733202287",
+    "dev_fold_02_sri_lanka/train": "3c9b175cdc25020663657ad4e8c79fe79fcaf6a5d4f2c82708ab4b782340494d",
+    "dev_fold_02_sri_lanka/valid": "6c34264b213bfe8a12bb4e54c6386201397440e4f06ace71077ddc4efe5bab1e",
+    "dev_fold_03_spain/train": "b6439d37953c28aef590dc485d3938141fa0f4dd8147d4a8501be61fc53b235f",
+    "dev_fold_03_spain/valid": "3120fe3f04c1cf1014eea2577d2f02e835a0a4cef6b694d37dc1ccd322e9c2a0"
+  },
+  "threshold_proposed": 0.5,
+  "primary_selection_metric_proposed": "macro_mean_water_iou_across_three_dev_val_events",
+  "future_seeds_proposed": [
+    42,
+    123,
+    777
+  ],
+  "historical_tests": "India/Paraguay/Ghana excluded from dev; not pristine for independent confirmation",
+  "thai_pilot": "diagnostic only; no comparable water-IoU without aligned, validated GT"
+}

@@ -1,0 +1,45 @@
+{
+  "model_checkpoint": "results/event_level_v1/fold_02_paraguay/best_sar_unet.pt",
+  "model_epoch": 3,
+  "fixed_threshold": 0.5,
+  "normalization_db_min": [
+    -35.0,
+    -40.0
+  ],
+  "normalization_db_max": [
+    5.0,
+    0.0
+  ],
+  "device": "mps",
+  "note": "No model fitting. Bolivia is one held-out geographic event. Official test and training contain chips from shared event sites. Neither is Thailand external validation.",
+  "results": [
+    {
+      "split": "test",
+      "n_images": 66,
+      "n_site_prefixes": 1,
+      "aggregate_counts": {
+        "tp": 877694,
+        "tn": 15014259,
+        "fp": 263368,
+        "fn": 471110,
+        "valid_pixels": 16626431,
+        "brier_sum": 653121.073014267
+      },
+      "micro_metrics": {
+        "iou": 0.5444170969350665,
+        "f1": 0.70501304086244,
+        "precision": 0.7691904559086185,
+        "recall": 0.6507201935937319,
+        "accuracy": 0.9558246745798903,
+        "water_fraction_gt": 0.08112408489831642,
+        "water_fraction_pred": 0.06862940098208689,
+        "brier_score": 0.039282096862174876
+      },
+      "mean_image_iou_nonempty_union": 0.3416108231482141,
+      "mean_site_iou": 0.5444170969350665,
+      "mean_image_loss": 0.46107472321300796,
+      "images_with_zero_gt_water": 10,
+      "images_with_zero_union": 1
+    }
+  ]
+}

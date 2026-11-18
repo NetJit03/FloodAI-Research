@@ -1,0 +1,3 @@
+split,name,site_prefix,reason
+test,Ghana_83483_S1Hand.tif,Ghana,zero_valid_pixels_after_label_and_sar_mask
+test,Paraguay_34417_S1Hand.tif,Paraguay,zero_valid_pixels_after_label_and_sar_mask

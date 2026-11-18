@@ -1,0 +1,159 @@
+{
+  "panels": [
+    {
+      "file": "presentation/deck_v2/assets/Spain_1167260_gt.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_03_spain/Spain_1167260_S1Hand_ensemble.npz",
+      "source_sha256": "483caed20121350376a9b4d5568e9d561d3d4581c3cf9cdda2f2db174449471d",
+      "sha256": "31a2d42b2a024433a94ce9b2b3824a7b6c03de75300999d6f2486a1933ec35ea",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Spain_1167260_pred.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_03_spain/Spain_1167260_S1Hand_ensemble.npz",
+      "source_sha256": "483caed20121350376a9b4d5568e9d561d3d4581c3cf9cdda2f2db174449471d",
+      "sha256": "c6eee1683f73d4ad55c155697d390e31b6d96aee5c4d47827a299b15d15e0977",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Spain_1167260_error.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_03_spain/Spain_1167260_S1Hand_ensemble.npz",
+      "source_sha256": "483caed20121350376a9b4d5568e9d561d3d4581c3cf9cdda2f2db174449471d",
+      "sha256": "164371e7b833cc7d8a6d33ef2573191cfc3d4df6d63618000df5d6d2634e036e",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_713926_gt.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_02_sri_lanka/Sri-Lanka_713926_S1Hand_ensemble.npz",
+      "source_sha256": "11e472db80c191aed640060a4955b8ba57367e85c110bae1bfd662a842eaeccb",
+      "sha256": "69b2464f7d332c7f34973dda5bf040027af37c719adfebb881f635c070bd254a",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_713926_pred.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_02_sri_lanka/Sri-Lanka_713926_S1Hand_ensemble.npz",
+      "source_sha256": "11e472db80c191aed640060a4955b8ba57367e85c110bae1bfd662a842eaeccb",
+      "sha256": "b66765ec1e7881c2d39fcc681a7514ded9f8672f50df131a0ae932e4a40db2d7",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_713926_error.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_02_sri_lanka/Sri-Lanka_713926_S1Hand_ensemble.npz",
+      "source_sha256": "11e472db80c191aed640060a4955b8ba57367e85c110bae1bfd662a842eaeccb",
+      "sha256": "a633613c4d6c28700e3aea651fde8c1fe71db34cfccb4d301a48f1a6ef219463",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_713926_vv.png",
+      "source": "data/sen1floods11/S1Hand/Sri-Lanka_713926_S1Hand.tif",
+      "source_sha256": "8d51be4c5e9a9bb87ae95b69ae2ba10a59ac30d84056b6d65d5cbc44af2e515d",
+      "sha256": "690977c77e3fbebe58bd009fe48fb54a1bdeede8a817c9f109baec2a47628848",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_713926_vh.png",
+      "source": "data/sen1floods11/S1Hand/Sri-Lanka_713926_S1Hand.tif",
+      "source_sha256": "8d51be4c5e9a9bb87ae95b69ae2ba10a59ac30d84056b6d65d5cbc44af2e515d",
+      "sha256": "03193ff0cd218f6ea0288b1a4d743a82963f528199808ebf4e51f57025594ad2",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_713926_prob.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_02_sri_lanka/Sri-Lanka_713926_S1Hand_ensemble.npz",
+      "source_sha256": "11e472db80c191aed640060a4955b8ba57367e85c110bae1bfd662a842eaeccb",
+      "sha256": "1e25322b374886284fcdbd46905ffd0b5202bb8aa7027a7de99e06b7fda727cc",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_845821_gt.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_02_sri_lanka/Sri-Lanka_845821_S1Hand_ensemble.npz",
+      "source_sha256": "3265d7c6d758244e30fc8d943ae8e29b37c73921cd94fcc3f32ffd4672deb0e1",
+      "sha256": "06928840c19e2b39326d3d3265292146f9bf1d019cc8e6f7e3a9afb1d6010f7b",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_845821_pred.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_02_sri_lanka/Sri-Lanka_845821_S1Hand_ensemble.npz",
+      "source_sha256": "3265d7c6d758244e30fc8d943ae8e29b37c73921cd94fcc3f32ffd4672deb0e1",
+      "sha256": "b6b57fef39c3cf0e0a8c741eee3707ed7db047341e47687838bd1f85257e5dab",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_845821_error.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_02_sri_lanka/Sri-Lanka_845821_S1Hand_ensemble.npz",
+      "source_sha256": "3265d7c6d758244e30fc8d943ae8e29b37c73921cd94fcc3f32ffd4672deb0e1",
+      "sha256": "0c919c113360175a399edf50c4001d914fa1e467df5087d3b654daff9a28b6af",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_845821_predictive_entropy_bits.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_02_sri_lanka/Sri-Lanka_845821_S1Hand_ensemble.npz",
+      "source_sha256": "3265d7c6d758244e30fc8d943ae8e29b37c73921cd94fcc3f32ffd4672deb0e1",
+      "sha256": "1453e11055a52dca5f87866dd6da4f97b76f9458d771bb070ac2d437a0cda1b3",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/Sri-Lanka_845821_mutual_information_bits.png",
+      "source": "results/event_level_v2/m80a_dev_ensemble_uq/previews/dev_fold_02_sri_lanka/Sri-Lanka_845821_S1Hand_ensemble.npz",
+      "source_sha256": "3265d7c6d758244e30fc8d943ae8e29b37c73921cd94fcc3f32ffd4672deb0e1",
+      "sha256": "5cba91ab993a2b5619a122d8a580fbbdc03aa1ec8d3cb2b1d6c7520a50ff7498",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/failure_gt.png",
+      "source": "data/sen1floods11/LabelHand/Sri-Lanka_534068_LabelHand.tif",
+      "source_sha256": "e77e5e64025852b82ab5f8624ed126e866a6fff9c661635313aab9276522ad4b",
+      "sha256": "5180fcf2c6ce52a68806cc1ad79f8e8567f0fad27887f1d3b0c1ec40149ec988",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/failure_seed42.png",
+      "source": "results/event_level_v2/m74b_high_water_diagnostics/m74b_selected_probs.npz",
+      "source_sha256": "5a540ffc488464d3754391e3c71dcef511c290928185d8dd285008bfa73b7318",
+      "sha256": "53f8034e91781df721c447580e38ff2e490f85f7d4935a5c4a842966f43451cf",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/failure_seed123.png",
+      "source": "results/event_level_v2/m74b_high_water_diagnostics/m74b_selected_probs.npz",
+      "source_sha256": "5a540ffc488464d3754391e3c71dcef511c290928185d8dd285008bfa73b7318",
+      "sha256": "7d97f0ab0430ce2523d6580c05222e054d9142253afa29071d8155e7271891fc",
+      "type": "scientific rendering of measured arrays"
+    },
+    {
+      "file": "presentation/deck_v2/assets/failure_seed777.png",
+      "source": "results/event_level_v2/m74b_high_water_diagnostics/m74b_selected_probs.npz",
+      "source_sha256": "5a540ffc488464d3754391e3c71dcef511c290928185d8dd285008bfa73b7318",
+      "sha256": "fd5c1a90fdd2e885bf32cefa113fdacf622d939082e8df8e95e6db797371d330",
+      "type": "scientific rendering of measured arrays"
+    }
+  ],
+  "cases": [
+    {
+      "stem": "Spain_1167260",
+      "valid_pixels": 262119,
+      "tp": 23861,
+      "fp": 5984,
+      "fn": 18658,
+      "entropy_capture": 0.399926953981008,
+      "mi_capture": 0.23106890674458241
+    },
+    {
+      "stem": "Sri-Lanka_713926",
+      "valid_pixels": 262104,
+      "tp": 79177,
+      "fp": 3109,
+      "fn": 1329,
+      "entropy_capture": 0.8055430374042362,
+      "mi_capture": 0.8177106804867057
+    },
+    {
+      "stem": "Sri-Lanka_845821",
+      "valid_pixels": 240758,
+      "tp": 217370,
+      "fp": 350,
+      "fn": 17176,
+      "entropy_capture": 0.46844687892274334,
+      "mi_capture": 0.02613260298984366
+    }
+  ]
+}

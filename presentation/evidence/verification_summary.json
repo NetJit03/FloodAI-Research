@@ -1,0 +1,40 @@
+{
+  "checked_at_bangkok": "2026-11-18T00:37:09.066076+07:00",
+  "checks": 1366,
+  "passed": 1366,
+  "failed": [],
+  "frozen_files": 500,
+  "unique_dev_chips": 243,
+  "runs": 27,
+  "ensemble_images": 141,
+  "selected_npz": 9,
+  "cpu_preview_inference": 9,
+  "model_metrics": [
+    {
+      "method": "baseline",
+      "macro_dev_iou": 0.6143297025463857,
+      "seed_macro_sample_sd": 0.05755119056370495,
+      "delta_vs_baseline": 0.0
+    },
+    {
+      "method": "v2a_eventbalanced",
+      "macro_dev_iou": 0.5979154642385853,
+      "seed_macro_sample_sd": 0.045740560054730074,
+      "delta_vs_baseline": -0.01641423830780042
+    },
+    {
+      "method": "v2b_coverage",
+      "macro_dev_iou": 0.587919012101517,
+      "seed_macro_sample_sd": 0.04884912988786312,
+      "delta_vs_baseline": -0.026410690444868767
+    }
+  ],
+  "ensemble_macro": 0.6483334083463912,
+  "limitations": [
+    "Full 141-chip ensemble inference was not repeated; raw masks/counts and aggregations checked.",
+    "No new training. No historical TEST or Thailand inference.",
+    "Frozen hashes prove byte identity to local record, not independent label truth or untouched TEST.",
+    "Official dataset documents VV/VH dB; local TIFF band units are not necessarily populated.",
+    "No statistical significance or causal claim; selected previews are not representative."
+  ]
+}

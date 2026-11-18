@@ -1,0 +1,15 @@
+{
+  "status": "M76B_TRAIN_ONLY_SAMPLER_AUDITED",
+  "fold": "dev_fold_03_spain",
+  "seed": 123,
+  "n_train": 213,
+  "num_samples_per_epoch": 213,
+  "replacement": true,
+  "sampler": "50% image-uniform + 50% five-bin-uniform",
+  "design_fingerprint": "0e5789c5fd2e8a8e7d152af8d9e61b4ad347c2933212f7c3bbe0c838ac25418c",
+  "frozen_design_sha256": "7f73d6d2b5ff7f44c1c93ef8c63fef8af9d748d4404a7dfc20cf4dc5968a6d41",
+  "train_audit_sha256": "1b37e831931c59e992a2d181d54cebc77fb2b88fbfdbd77fb53f729be15edf5f",
+  "trainer_v2b_sha256": "0cd0fbfd83d3de2f680ae21e21e1067769cdd31b3de6323d45d5aa407f7ff8ee",
+  "no_test_data_or_metrics_used": true,
+  "note": "TRAIN full-chip label fractions (not cropped patch fractions); 3-epoch probe is illustrative, not an optimization criterion."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS_REAL_TRAIN_BATCH_NO_OPTIMIZER",
+  "fold": "dev_fold_02_sri_lanka",
+  "seed": 42,
+  "batch_shape": [
+    2,
+    2,
+    256,
+    256
+  ],
+  "valid_pixels": 131072,
+  "train_count": 201,
+  "no_test_or_validation_metrics": true
+}

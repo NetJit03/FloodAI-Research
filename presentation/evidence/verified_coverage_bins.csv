@@ -1,0 +1,16 @@
+fold,water_bin,n_chips,draw_probability_mass
+dev_fold_01_usa,water_1_to_10pct,70,0.30114942528735633
+dev_fold_01_usa,water_ge_50pct,16,0.14597701149425288
+dev_fold_01_usa,water_10_to_50pct,36,0.20344827586206898
+dev_fold_01_usa,water_0_to_1pct,38,0.20919540229885059
+dev_fold_01_usa,zero_water,14,0.14022988505747128
+dev_fold_02_sri_lanka,water_1_to_10pct,80,0.2990049751243781
+dev_fold_02_sri_lanka,water_ge_50pct,14,0.13482587064676618
+dev_fold_02_sri_lanka,water_10_to_50pct,40,0.19950248756218908
+dev_fold_02_sri_lanka,water_0_to_1pct,55,0.23681592039800994
+dev_fold_02_sri_lanka,zero_water,12,0.12985074626865672
+dev_fold_03_spain,water_1_to_10pct,85,0.29953051643192485
+dev_fold_03_spain,water_ge_50pct,13,0.13051643192488263
+dev_fold_03_spain,water_10_to_50pct,42,0.19859154929577466
+dev_fold_03_spain,water_0_to_1pct,59,0.23849765258215963
+dev_fold_03_spain,zero_water,14,0.13286384976525822

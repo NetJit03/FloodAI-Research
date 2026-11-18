@@ -1,0 +1,16 @@
+fold,water_bin,n_images,share_images
+dev_fold_01_usa,zero_water,14,0.08045977011494253
+dev_fold_01_usa,water_0_to_1pct,38,0.21839080459770116
+dev_fold_01_usa,water_1_to_10pct,70,0.40229885057471265
+dev_fold_01_usa,water_10_to_50pct,36,0.20689655172413793
+dev_fold_01_usa,water_ge_50pct,16,0.09195402298850575
+dev_fold_02_sri_lanka,zero_water,12,0.05970149253731343
+dev_fold_02_sri_lanka,water_0_to_1pct,55,0.2736318407960199
+dev_fold_02_sri_lanka,water_1_to_10pct,80,0.39800995024875624
+dev_fold_02_sri_lanka,water_10_to_50pct,40,0.19900497512437812
+dev_fold_02_sri_lanka,water_ge_50pct,14,0.06965174129353234
+dev_fold_03_spain,zero_water,14,0.06572769953051644
+dev_fold_03_spain,water_0_to_1pct,59,0.27699530516431925
+dev_fold_03_spain,water_1_to_10pct,85,0.39906103286384975
+dev_fold_03_spain,water_10_to_50pct,42,0.19718309859154928
+dev_fold_03_spain,water_ge_50pct,13,0.06103286384976526

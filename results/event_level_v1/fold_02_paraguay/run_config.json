@@ -1,0 +1,24 @@
+{
+  "data_root": "data/sen1floods11/event_level_roots/fold_02_paraguay",
+  "output_dir": "results/event_level_v1/fold_02_paraguay",
+  "epochs": 25,
+  "batch_size": 2,
+  "crop_size": 256,
+  "base_channels": 16,
+  "lr": 0.0003,
+  "patience": 6,
+  "seed": 42,
+  "max_train": 0,
+  "max_val": 0,
+  "check_only": false,
+  "device": "mps",
+  "db_min": [
+    -35,
+    -40
+  ],
+  "db_max": [
+    5,
+    0
+  ],
+  "warning": "Do not use Thai UNOSAT detected-flood labels as Sen1Floods11 surface-water GT."
+}

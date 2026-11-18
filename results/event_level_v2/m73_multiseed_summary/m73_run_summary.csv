@@ -1,0 +1,10 @@
+seed,fold,validation_event,train_images,valid_images,epochs_completed,best_epoch,best_val_iou,best_val_f1,best_val_recall,best_val_precision,best_val_loss,checkpoint_path
+42,dev_fold_01_usa,USA,174,69,7,1,0.5288798323764464,0.6918527161868189,0.6735258221914001,0.711204871455006,0.6313260577727056,results/event_level_v2/baseline_seed42/dev_fold_01_usa/best_sar_unet.pt
+42,dev_fold_02_sri_lanka,Sri Lanka,201,42,10,4,0.706512767787693,0.8280193164960723,0.7588443531666795,0.9110710028528616,0.5111306877363295,results/event_level_v2/baseline_seed42/dev_fold_02_sri_lanka/best_sar_unet.pt
+42,dev_fold_03_spain,Spain,213,30,15,9,0.6939537731004872,0.8193302368934493,0.8163285784554845,0.8223540511291787,0.3821393311023712,results/event_level_v2/baseline_seed42/dev_fold_03_spain/best_sar_unet.pt
+123,dev_fold_01_usa,USA,174,69,12,6,0.5367305674808968,0.6985356819715488,0.7172310338570601,0.680790197325192,0.48244564321593963,results/event_level_v2/baseline_seed123/dev_fold_01_usa/best_sar_unet.pt
+123,dev_fold_02_sri_lanka,Sri Lanka,201,42,14,8,0.7010675914180968,0.8242677656725576,0.7880775320292221,0.8639418539147693,0.41395923779124305,results/event_level_v2/baseline_seed123/dev_fold_02_sri_lanka/best_sar_unet.pt
+123,dev_fold_03_spain,Spain,213,30,16,10,0.7176274592232147,0.8356031517425284,0.7708293162813576,0.9122617466151749,0.3894883212943872,results/event_level_v2/baseline_seed123/dev_fold_03_spain/best_sar_unet.pt
+777,dev_fold_01_usa,USA,174,69,15,9,0.5493624166943624,0.7091464343977737,0.7025905460727948,0.7158258213768818,0.45555332691773126,results/event_level_v2/baseline_seed777/dev_fold_01_usa/best_sar_unet.pt
+777,dev_fold_02_sri_lanka,Sri Lanka,201,42,10,4,0.3890938899376368,0.5602125137201562,0.40665095017827807,0.9001205227675041,0.5180279218724796,results/event_level_v2/baseline_seed777/dev_fold_02_sri_lanka/best_sar_unet.pt
+777,dev_fold_03_spain,Spain,213,30,16,10,0.705739024898637,0.8274876925449663,0.826047220855878,0.828933196835811,0.36439705491065977,results/event_level_v2/baseline_seed777/dev_fold_03_spain/best_sar_unet.pt

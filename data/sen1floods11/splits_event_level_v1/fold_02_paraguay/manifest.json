@@ -1,0 +1,30 @@
+{
+  "fold": "fold_02_paraguay",
+  "test_event": "Paraguay",
+  "validation_event": "Sri-Lanka",
+  "training_events": [
+    "Cambodia",
+    "Ghana",
+    "India",
+    "Nigeria",
+    "Pakistan",
+    "Somalia",
+    "Spain",
+    "USA"
+  ],
+  "image_counts": {
+    "train": 317,
+    "valid": 42,
+    "test": 66
+  },
+  "bolivia_locked_images": 15,
+  "event_overlap": false,
+  "chip_overlap": false,
+  "output_sha256": {
+    "flood_train_data.csv": "a7a513525dbbef562f51c6cb508e04aeebbd16e21301238afcd996933aff6ec0",
+    "flood_valid_data.csv": "9010e07b4cc8617d8918ce46373638c9cb2fa1a45abd3975b67a897a263495f5",
+    "flood_test_data.csv": "16c18974d3e774d183c0bb88d5b1cabdb43dbd80cec0ece853c8806acee054c9",
+    "flood_bolivia_data_LOCKED.csv": "4775d100fae1f1ca66a842b8af6d2a97b8bfc5847f29d88ff0affff2c1e22768"
+  },
+  "note": "Do not use this fold's test event or Bolivia for training, validation, early stopping, or threshold selection."
+}

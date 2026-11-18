@@ -1,0 +1,11 @@
+{
+  "file": "/Users/netinho/Projects/FloodAI-Research/presentation/output/FloodAI_Research_Presentation_TH_Final.pptx",
+  "status": "PASS",
+  "checks": 274,
+  "failures": [],
+  "editable_charts": 3,
+  "editable_tables": 9,
+  "notes": 18,
+  "authoring_override": "User explicitly approved PptxGenJS in place of the unavailable artifact-tool runtime.",
+  "rendering": "See render_validation.json for the separate visual verification status"
+}

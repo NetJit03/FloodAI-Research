@@ -1,0 +1,32 @@
+{
+  "checkpoint": "results/sar_unet_baseline_v1/best_sar_unet.pt",
+  "sar": "data/thailand_external/2021_10_05/sar/Thailand_S1_VV_VH_Sigma0dB.tif",
+  "device": "mps",
+  "epoch": 12,
+  "threshold_from_checkpoint": 0.5,
+  "tiles_inferred": 40,
+  "sar_valid_pixels": 1394581,
+  "notes": [
+    "Model predicts all surface water; UNOSAT labels detected flood only.",
+    "Agreement is a diagnostic, not validated accuracy/IoU or a fair cross-country comparison.",
+    "No weights or thresholds were tuned using Thailand."
+  ],
+  "diagnostics": [
+    {
+      "name": "original_unosat_valid_mask",
+      "reference_valid_pixels": 1394581,
+      "unosat_flood_pixels": 100423,
+      "flood_reference_detection_rate": 0.9720482359618813,
+      "predicted_water_fraction_in_nonflood_reference": 0.2666629576914102,
+      "predicted_water_fraction_in_valid_area": 0.3174573581599061
+    },
+    {
+      "name": "excluding_jrc_2020_permanent_and_nodata",
+      "reference_valid_pixels": 1384024,
+      "unosat_flood_pixels": 100361,
+      "flood_reference_detection_rate": 0.972040932234633,
+      "predicted_water_fraction_in_nonflood_reference": 0.2607428896836631,
+      "predicted_water_fraction_in_valid_area": 0.31232189615208983
+    }
+  ]
+}

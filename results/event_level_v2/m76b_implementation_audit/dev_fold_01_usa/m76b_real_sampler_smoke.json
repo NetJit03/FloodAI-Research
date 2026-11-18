@@ -1,0 +1,14 @@
+{
+  "status": "PASS_REAL_TRAIN_BATCH_NO_OPTIMIZER",
+  "fold": "dev_fold_01_usa",
+  "seed": 42,
+  "batch_shape": [
+    2,
+    2,
+    256,
+    256
+  ],
+  "valid_pixels": 131046,
+  "train_count": 174,
+  "no_test_or_validation_metrics": true
+}

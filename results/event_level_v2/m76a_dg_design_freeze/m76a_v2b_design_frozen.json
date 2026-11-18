@@ -1,0 +1,126 @@
+{
+  "status": "DESIGN_FROZEN_IMPLEMENTATION_PENDING",
+  "frozen_at_utc": "2026-11-16T07:25:13.404397+00:00",
+  "design_fingerprint": "0e5789c5fd2e8a8e7d152af8d9e61b4ad347c2933212f7c3bbe0c838ac25418c",
+  "design": {
+    "protocol": "M7.6A_V2B_TRAIN_ONLY_WATER_COVERAGE_SAMPLER",
+    "scope": "EXPLORATORY DEVELOPMENT; design-only freeze; V2-B trainer not yet implemented",
+    "baseline_m70d_fingerprint": "dff29456bb921df80dc4d6afd91b266eb830f04092a28c14fd0870a9806a2529",
+    "sources_sha256": {
+      "results/event_level_v2/m70d_protocol_freeze/m70d_frozen_protocol.json": "03d9b9189cbf2ca9ea846949c40c60060c9ed86b419515c87e59d14bd2ae2bc0",
+      "results/event_level_v2/m75d_v2b_design_audit/m75d_train_per_chip.csv": "1b37e831931c59e992a2d181d54cebc77fb2b88fbfdbd77fb53f729be15edf5f",
+      "results/event_level_v2/m75d_v2b_design_audit/m75d_coverage_by_fold.csv": "0e2029521979aec692a3e9e3866d20353502c989a47c269d0baf225a133a9811",
+      "results/event_level_v2/m75d_v2b_design_audit/m75d_sampling_sensitivity.csv": "e9cee5aae8b62f750762fc6fe90be78f1428a8da56acb0f827fed2da3944f317"
+    },
+    "dataset": "Sen1Floods11 hand-labeled VV/VH, 243 unique DEV chips, 7 DEV events",
+    "folds": {
+      "dev_fold_01_usa": {
+        "train_count": 174,
+        "valid_count": 69,
+        "valid_event": "USA",
+        "train_bin_counts": {
+          "zero_water": 14,
+          "water_0_to_1pct": 38,
+          "water_1_to_10pct": 70,
+          "water_10_to_50pct": 36,
+          "water_ge_50pct": 16
+        }
+      },
+      "dev_fold_02_sri_lanka": {
+        "train_count": 201,
+        "valid_count": 42,
+        "valid_event": "Sri-Lanka",
+        "train_bin_counts": {
+          "zero_water": 12,
+          "water_0_to_1pct": 55,
+          "water_1_to_10pct": 80,
+          "water_10_to_50pct": 40,
+          "water_ge_50pct": 14
+        }
+      },
+      "dev_fold_03_spain": {
+        "train_count": 213,
+        "valid_count": 30,
+        "valid_event": "Spain",
+        "train_bin_counts": {
+          "zero_water": 14,
+          "water_0_to_1pct": 59,
+          "water_1_to_10pct": 85,
+          "water_10_to_50pct": 42,
+          "water_ge_50pct": 13
+        }
+      }
+    },
+    "model": "SmallUNet, 2 SAR bands (VV then VH), base_channels=16",
+    "treatment": {
+      "only_intended_change": "TRAIN image-index sampling policy",
+      "baseline": "shuffle without replacement once per epoch",
+      "v2b": "WeightedRandomSampler(replacement=True, num_samples=N_train)",
+      "draw_probability_for_image_i": "0.5 / N_train + 0.5 / (5 * N_bin(image_i))",
+      "strata": [
+        "zero_water",
+        "water_0_to_1pct",
+        "water_1_to_10pct",
+        "water_10_to_50pct",
+        "water_ge_50pct"
+      ],
+      "water_fraction_source": "M7.5D TRAIN-only full-chip GT valid water / valid pixels",
+      "mixing_weight_uniform_images": 0.5,
+      "mixing_weight_uniform_strata": 0.5,
+      "sampling_draws_per_epoch": "N_train",
+      "sampler_seed_policy": "Torch generator controlled by each training seed",
+      "augmentation": "UNCHANGED baseline crop/flips/rotations; NO new radiometric jitter",
+      "caution": "With replacement can repeat rare images; full-chip bin != crop water fraction"
+    },
+    "held_constant": {
+      "input": "VV/VH in documented dB; no new data channels",
+      "normalization_db": {
+        "VV": [
+          -35.0,
+          5.0
+        ],
+        "VH": [
+          -40.0,
+          0.0
+        ]
+      },
+      "label": {
+        "ignore": -1,
+        "land": 0,
+        "water": 1
+      },
+      "valid_mask": "finite two-channel SAR AND label != -1; never mask land=0 as nodata",
+      "architecture": "SmallUNet base16",
+      "loss": "0.5 masked BCE + 0.5 masked Dice",
+      "optimizer": "AdamW lr=0.0003 weight_decay=0.0001",
+      "train_crop": 256,
+      "validation_full_chip": 512,
+      "batch_size": 2,
+      "max_epochs": 25,
+      "early_stopping_patience": 6,
+      "threshold": 0.5,
+      "checkpoint_selection": "best VALIDATION event-level pixel-micro water IoU",
+      "zero_union_iou": "NaN",
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "no_subset_limits": true
+    },
+    "primary_metric": "macro mean of 3 held-out DEV event-level pixel-micro water IoUs per seed",
+    "secondary_metrics": [
+      "IoU per DEV event",
+      "Water Recall",
+      "Water Precision",
+      "F1/Dice",
+      "paired difference by fold/seed",
+      "seed stability"
+    ],
+    "hypothesis": "TRAIN-only water-coverage sampling may improve cross-event water IoU/stability",
+    "comparison_policy": "Baseline/V2-A/V2-B same 3 DEV folds x 3 seeds; no TEST-based tuning",
+    "test_policy": "India/Paraguay/Ghana historical tests, Bolivia and Thailand excluded entirely",
+    "interpretation": "M7.5D and earlier DEV outcomes informed this candidate; not an untouched confirmatory test",
+    "future_gate": "Before full V2-B runs: implement sampler separately, unit-test and smoke-test, record trainer hash"
+  }
+}

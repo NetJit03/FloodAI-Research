@@ -1,0 +1,23 @@
+{
+  "status": "VISUALLY_REVIEWED",
+  "slides": 18,
+  "canvas": "16:9",
+  "renderer": "LibreOffice 26.8.3, headless, explicit Tahoma fontconfig",
+  "rasterizer": "macOS PDFKit, 1536 x 864",
+  "review": "All 18 pages inspected individually at full size. Final local text/label corrections on slides 7, 10, 12 inspected individually again. Final contact sheets inspected for unintended changes.",
+  "final_render_directory": "presentation/deck/renders_final",
+  "native_powerpoint_final_inspected": false,
+  "native_limit": "PowerPoint/UI automation became unresponsive. Final corrected file was not reopened in Microsoft PowerPoint. Earlier draft table anchor issue was repaired in source; final OOXML and LibreOffice import checks passed.",
+  "files": [
+    {
+      "path": "/Users/netinho/Projects/FloodAI-Research/presentation/output/FloodAI_Research_Presentation_TH_Final.pdf",
+      "bytes": 2266581,
+      "sha256": "6589d7078a663183dd471eafc578f0099d9d2b79482834751783118aeb4da86d"
+    },
+    {
+      "path": "/Users/netinho/Projects/FloodAI-Research/presentation/output/FloodAI_Research_Presentation_TH_Final.pptx",
+      "bytes": 4580649,
+      "sha256": "602bb8ec06205bd2353c301e5ba7afb3c13717dc5db9668bb8e23ff1f30ccb39"
+    }
+  ]
+}

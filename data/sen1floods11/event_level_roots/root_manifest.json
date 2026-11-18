@@ -1,0 +1,24 @@
+{
+  "source": "/Users/netinho/Projects/FloodAI-Research/data/sen1floods11/splits_event_level_v1",
+  "folds": {
+    "fold_01_india": {
+      "train": 288,
+      "valid": 69,
+      "test": 68,
+      "bolivia_inspection_only": 15
+    },
+    "fold_02_paraguay": {
+      "train": 317,
+      "valid": 42,
+      "test": 66,
+      "bolivia_inspection_only": 15
+    },
+    "fold_03_ghana": {
+      "train": 347,
+      "valid": 30,
+      "test": 48,
+      "bolivia_inspection_only": 15
+    }
+  },
+  "note": "Symbolic links; source data unchanged"
+}

@@ -1,0 +1,46 @@
+{
+  "checkpoint": "results/event_level_v1/fold_03_ghana/best_sar_unet.pt",
+  "epoch": 8,
+  "data_root": "data/sen1floods11/event_level_roots/fold_03_ghana",
+  "threshold_fixed": 0.5,
+  "bins_equal_width": 15,
+  "summary": [
+    {
+      "n_images": 30,
+      "valid_pixels": 7727802,
+      "water_pixels": 1016500,
+      "water_fraction": 0.13153804924090964,
+      "tp": 821512,
+      "tn": 6552948,
+      "fp": 158354,
+      "fn": 194988,
+      "precision": 0.8383921883196274,
+      "recall": 0.8081770782095425,
+      "iou": 0.6992460339752854,
+      "brier": 0.03588671829209996,
+      "nll": 0.134090510650959,
+      "ece": 0.011631947036392273,
+      "mean_predicted_water_probability": 0.14196191931573748,
+      "split": "valid"
+    },
+    {
+      "n_images": 48,
+      "valid_pixels": 9188240,
+      "water_pixels": 577708,
+      "water_fraction": 0.06287471811794207,
+      "tp": 251850,
+      "tn": 8546635,
+      "fp": 63897,
+      "fn": 325858,
+      "precision": 0.7976322815418674,
+      "recall": 0.43594687973855306,
+      "iou": 0.39253123027407827,
+      "brier": 0.034580057506461884,
+      "nll": 0.1317121058395125,
+      "ece": 0.018444276324567847,
+      "mean_predicted_water_probability": 0.04965651743827639,
+      "split": "test"
+    }
+  ],
+  "research_note": "Descriptive test-set error analysis only. No calibration fitting, threshold tuning, or model selection. Pixel-wise ECE may be dominated by non-water and spatial correlations."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "DEV_VALID_ONLY",
+  "baseline_mean": 0.6143297025463857,
+  "v2a_mean": 0.5979154642385853,
+  "v2a_sample_sd": 0.045740560054730074,
+  "paired_mean_delta": -0.01641423830780042,
+  "limitation": "Exploratory; existing DEV events used for hypothesis generation. Independent confirmation required."
+}

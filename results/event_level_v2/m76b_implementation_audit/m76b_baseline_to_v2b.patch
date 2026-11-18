@@ -1,0 +1,60 @@
+--- train_sar_unet.py
++++ train_v2b_coverage.py
+@@ -31,6 +31,7 @@
+ from torch import nn
+ from torch.nn import functional as F
+ from torch.utils.data import Dataset, DataLoader
++from m76b_water_sampler import build_train_sampler
+ 
+ # Preset transform (Sigma0 dB) to be reused verbatim at inference.
+ # This is a STARTING preset, not a train-optimized normalizer.
+@@ -258,6 +259,8 @@
+     p.add_argument('--max-val', type=int, default=0,
+                    help='Development only: use N validation samples')
+     p.add_argument('--check-only', action='store_true')
++    p.add_argument('--v2b-sampler-smoke',action='store_true',
++                   help='Sampler + real TRAIN DataLoader batch only; no training')
+     p.add_argument('--device', choices=('auto', 'mps',
+                    'cpu', 'cuda'), default='auto')
+     a = p.parse_args()
+@@ -269,6 +272,28 @@
+     val_recs = splits['valid'][:a.max_val] if a.max_val else splits['valid']
+     if not train_recs or not val_recs:
+         raise RuntimeError('Empty train or validation split')
++    if a.v2b_sampler_smoke:
++        if a.max_train or a.max_val:
++            raise ValueError('Sampler smoke requires full TRAIN and VALID manifests: no --max-*')
++        sampler=build_train_sampler(train_recs,a.data_root,a.output_dir,a.seed,
++                                    project_root=Path(__file__).resolve().parent)
++        loader=DataLoader(SarWaterDataset(train_recs,a.crop_size,True),
++                          batch_size=a.batch_size,shuffle=False,
++                          sampler=sampler,num_workers=0,pin_memory=False)
++        x,y,v=next(iter(loader))
++        assert x.shape[0] == a.batch_size and x.shape[1] == 2
++        assert int(v.sum()) > 0 and bool(torch.isfinite(x).all())
++        print('PASS: M7.6B REAL TRAIN weighted-sampler batch; shape=',tuple(x.shape),
++              'valid=',int(v.sum()),'water=',int((y.bool() & v.bool()).sum()))
++        Path(a.output_dir).mkdir(parents=True,exist_ok=True)
++        (Path(a.output_dir)/'m76b_real_sampler_smoke.json').write_text(json.dumps({
++            'status':'PASS_REAL_TRAIN_BATCH_NO_OPTIMIZER',
++            'fold':a.data_root.resolve().name,'seed':a.seed,
++            'batch_shape':list(x.shape),'valid_pixels':int(v.sum()),
++            'train_count':len(train_recs),'no_test_or_validation_metrics':True},
++            indent=2)+'\n',encoding='utf-8')
++        print('SMOKE ONLY: no model initialized/trained; no DEV metrics or TEST')
++        return
+     if a.check_only:
+         x, y, v = SarWaterDataset(
+             train_recs, crop_size=a.crop_size, augment=True)[0]
+@@ -286,8 +311,10 @@
+     if a.max_train or a.max_val:
+         print(
+             'WARNING: SUBSET RUN — do not report these metrics as final research results.')
++    v2b_sampler=build_train_sampler(train_recs,a.data_root,a.output_dir,a.seed,
++                                        project_root=Path(__file__).resolve().parent)
+     train = DataLoader(SarWaterDataset(train_recs, a.crop_size, True), batch_size=a.batch_size,
+-                       shuffle=True, num_workers=0, pin_memory=False)
++                       sampler=v2b_sampler,shuffle=False, num_workers=0, pin_memory=False)
+     valid = DataLoader(SarWaterDataset(val_recs, augment=False), batch_size=1,
+                        shuffle=False, num_workers=0, pin_memory=False)
+     model = SmallUNet(a.base_channels).to(device)

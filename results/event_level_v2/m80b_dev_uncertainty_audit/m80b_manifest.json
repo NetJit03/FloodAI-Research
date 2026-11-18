@@ -1,0 +1,44 @@
+{
+  "status": "DESCRIPTIVE_DEV_ONLY",
+  "timestamp_utc": "2026-11-16T07:54:49.913599+00:00",
+  "input_dir": "/Users/netinho/Projects/FloodAI-Research/results/event_level_v2/m80a_dev_ensemble_uq",
+  "input_file_sha256": {
+    "m80a_manifest.json": "aead109645e6d3d398537b85384b45cd6a5e30e938f440158d71f3f710dfcbf6",
+    "m80a_dev_per_image.csv": "e61ba7e2954956d3706ebd902836ef749f748c9840a12d840ef8fe90aef52e01",
+    "m80a_dev_by_event.csv": "49f8b1156bca55d4cdb2d4a00521135503b7eb3ff429761ba4db2e483a0fc823",
+    "previews/dev_fold_01_usa/USA_1010394_S1Hand_ensemble.npz": "5b6e40d105d7b2d21d43c23db00ee7cde8b6b6c988b73db77c66209a10240f4f",
+    "previews/dev_fold_01_usa/USA_504150_S1Hand_ensemble.npz": "23352e31f1eff6bbbb18a8794506d942a15b89f92ecb0c4c420bc73fb4b52fa6",
+    "previews/dev_fold_01_usa/USA_994009_S1Hand_ensemble.npz": "8195fd4e15f4a47d9a8d49571fe616682b8c7e69de10ede1ab312c745bc31d77",
+    "previews/dev_fold_02_sri_lanka/Sri-Lanka_534068_S1Hand_ensemble.npz": "503f0ccdeb047d52dae3ad97bba4ede1adb45a96ed98a6763fce70ca2806fb07",
+    "previews/dev_fold_02_sri_lanka/Sri-Lanka_713926_S1Hand_ensemble.npz": "11e472db80c191aed640060a4955b8ba57367e85c110bae1bfd662a842eaeccb",
+    "previews/dev_fold_02_sri_lanka/Sri-Lanka_845821_S1Hand_ensemble.npz": "3265d7c6d758244e30fc8d943ae8e29b37c73921cd94fcc3f32ffd4672deb0e1",
+    "previews/dev_fold_03_spain/Spain_1167260_S1Hand_ensemble.npz": "483caed20121350376a9b4d5568e9d561d3d4581c3cf9cdda2f2db174449471d",
+    "previews/dev_fold_03_spain/Spain_6095801_S1Hand_ensemble.npz": "0200690286351c03bb0b83c6a27effe0d663e3adf9ce0c14ff133c9be1813d5f",
+    "previews/dev_fold_03_spain/Spain_8565131_S1Hand_ensemble.npz": "714b71ca4e4c22e6cee697b4ff0fcda828dd6a1ce57e892a36d43a239650cde6"
+  },
+  "frozen_baseline_fingerprint": "dff29456bb921df80dc4d6afd91b266eb830f04092a28c14fd0870a9806a2529",
+  "n_dev_images": 141,
+  "n_sample_npzs": 9,
+  "events": [
+    "USA",
+    "Sri-Lanka",
+    "Spain"
+  ],
+  "threshold": 0.5,
+  "sample_selection": "3 selected M8.0A previews per event, not random, NOT representative",
+  "probability_bins": 15,
+  "uncertainty_top_fraction": 0.1,
+  "no_training": true,
+  "no_inference": true,
+  "no_recalibration": true,
+  "no_hyperparameter_selection": true,
+  "accessed_splits": [
+    "DEV VALID (from stored M8.0A files)"
+  ],
+  "never_used": [
+    "historical TEST",
+    "Bolivia",
+    "Thailand"
+  ],
+  "warning": "Do not extrapolate pixel-level results from selected 9 NPZ to 141 DEV images"
+}

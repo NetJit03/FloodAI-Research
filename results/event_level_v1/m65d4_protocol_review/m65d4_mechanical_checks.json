@@ -1,0 +1,188 @@
+{
+  "status": "MECHANICAL_CHECKS_PASSED_MANUAL_REVIEW_REQUIRED",
+  "checks": [
+    {
+      "check": "prior full audit",
+      "pass": true,
+      "detail": "snapshot reports 243 audited chips and still NOT FROZEN"
+    },
+    {
+      "check": "trainer fingerprint",
+      "pass": true,
+      "detail": "current=41a09ef9a2c73ebfb6162d6749200645ff8d8b65ea2bf3a8478da91080b7922b, audited=41a09ef9a2c73ebfb6162d6749200645ff8d8b65ea2bf3a8478da91080b7922b"
+    },
+    {
+      "check": "dev_fold_01_usa row counts",
+      "pass": true,
+      "detail": "train=174,valid=69"
+    },
+    {
+      "check": "dev_fold_01_usa event separation",
+      "pass": true,
+      "detail": "val=['USA'], train events=['Mekong', 'Nigeria', 'Pakistan', 'Somalia', 'Spain', 'Sri-Lanka']"
+    },
+    {
+      "check": "dev_fold_01_usa image separation",
+      "pass": true,
+      "detail": "cross-split duplicate names=0"
+    },
+    {
+      "check": "dev_fold_01_usa/train fingerprint",
+      "pass": true,
+      "detail": "matches audited manifest"
+    },
+    {
+      "check": "dev_fold_01_usa/valid fingerprint",
+      "pass": true,
+      "detail": "matches audited manifest"
+    },
+    {
+      "check": "dev_fold_01_usa test stub empty",
+      "pass": true,
+      "detail": "empty compatibility CSV required"
+    },
+    {
+      "check": "dev_fold_01_usa bolivia stub empty",
+      "pass": true,
+      "detail": "empty compatibility CSV required"
+    },
+    {
+      "check": "dev_fold_02_sri_lanka row counts",
+      "pass": true,
+      "detail": "train=201,valid=42"
+    },
+    {
+      "check": "dev_fold_02_sri_lanka event separation",
+      "pass": true,
+      "detail": "val=['Sri-Lanka'], train events=['Mekong', 'Nigeria', 'Pakistan', 'Somalia', 'Spain', 'USA']"
+    },
+    {
+      "check": "dev_fold_02_sri_lanka image separation",
+      "pass": true,
+      "detail": "cross-split duplicate names=0"
+    },
+    {
+      "check": "dev_fold_02_sri_lanka/train fingerprint",
+      "pass": true,
+      "detail": "matches audited manifest"
+    },
+    {
+      "check": "dev_fold_02_sri_lanka/valid fingerprint",
+      "pass": true,
+      "detail": "matches audited manifest"
+    },
+    {
+      "check": "dev_fold_02_sri_lanka test stub empty",
+      "pass": true,
+      "detail": "empty compatibility CSV required"
+    },
+    {
+      "check": "dev_fold_02_sri_lanka bolivia stub empty",
+      "pass": true,
+      "detail": "empty compatibility CSV required"
+    },
+    {
+      "check": "dev_fold_03_spain row counts",
+      "pass": true,
+      "detail": "train=213,valid=30"
+    },
+    {
+      "check": "dev_fold_03_spain event separation",
+      "pass": true,
+      "detail": "val=['Spain'], train events=['Mekong', 'Nigeria', 'Pakistan', 'Somalia', 'Sri-Lanka', 'USA']"
+    },
+    {
+      "check": "dev_fold_03_spain image separation",
+      "pass": true,
+      "detail": "cross-split duplicate names=0"
+    },
+    {
+      "check": "dev_fold_03_spain/train fingerprint",
+      "pass": true,
+      "detail": "matches audited manifest"
+    },
+    {
+      "check": "dev_fold_03_spain/valid fingerprint",
+      "pass": true,
+      "detail": "matches audited manifest"
+    },
+    {
+      "check": "dev_fold_03_spain test stub empty",
+      "pass": true,
+      "detail": "empty compatibility CSV required"
+    },
+    {
+      "check": "dev_fold_03_spain bolivia stub empty",
+      "pass": true,
+      "detail": "empty compatibility CSV required"
+    },
+    {
+      "check": "global development inventory",
+      "pass": true,
+      "detail": "243 unique images; 7 events"
+    },
+    {
+      "check": "historical TEST excluded",
+      "pass": true,
+      "detail": "no historical test/holdout events in dev"
+    }
+  ],
+  "folds": [
+    {
+      "fold": "dev_fold_01_usa",
+      "train": 174,
+      "valid": 69,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "Sri-Lanka"
+      ],
+      "valid_events": [
+        "USA"
+      ]
+    },
+    {
+      "fold": "dev_fold_02_sri_lanka",
+      "train": 201,
+      "valid": 42,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "USA"
+      ],
+      "valid_events": [
+        "Sri-Lanka"
+      ]
+    },
+    {
+      "fold": "dev_fold_03_spain",
+      "train": 213,
+      "valid": 30,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Sri-Lanka",
+        "USA"
+      ],
+      "valid_events": [
+        "Spain"
+      ]
+    }
+  ],
+  "units_source": "Official Sen1Floods11 README: S1 VV/VH in dB; confirm local provenance before claiming local file units",
+  "manual_review_required": [
+    "Confirm local TIFFs originated from official Sen1Floods11 and were not unit-converted after download",
+    "Read trainer AND evaluator source to verify identical VV/VH order and normalization",
+    "Read trainer AND evaluator source for ignore=-1, land=0, water=1, valid finite SAR mask, no label nodata=0 exclusion",
+    "Confirm train-only augmentation, validation IoU selection, no TEST-based optimization",
+    "Freeze V2 protocols with checkpoint selection rule, seeds, threshold and evaluation policy"
+  ]
+}

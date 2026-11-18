@@ -1,0 +1,17 @@
+comparison,polarization,group,n,p10_db,median_db,p90_db,pct_delta_vv_le_minus3
+Oct_minus_Jul13,VV,green_UNOSAT_flood_and_model_water,97616,-12.775,-7.767,-2.423,87.51
+Oct_minus_Jul13,VV,red_UNOSAT_flood_not_model_water,2807,-9.029,-4.599,0.518,66.41
+Oct_minus_Jul13,VV,yellow_model_water_outside_UNOSAT,345104,-10.053,-3.496,2.429,54.0
+Oct_minus_Jul13,VV,gray_neither,949054,-4.177,0.26,5.006,17.03
+Oct_minus_Jul13,VH,green_UNOSAT_flood_and_model_water,97616,-15.091,-9.559,-3.048,90.15
+Oct_minus_Jul13,VH,red_UNOSAT_flood_not_model_water,2807,-8.524,-3.443,1.511,54.01
+Oct_minus_Jul13,VH,yellow_model_water_outside_UNOSAT,345104,-13.17,-6.76,-0.307,77.01
+Oct_minus_Jul13,VH,gray_neither,949054,-5.386,-0.782,3.403,25.77
+Oct_minus_Sep11,VV,green_UNOSAT_flood_and_model_water,97616,-13.933,-8.619,-2.326,87.7
+Oct_minus_Sep11,VV,red_UNOSAT_flood_not_model_water,2807,-9.802,-5.022,0.115,68.93
+Oct_minus_Sep11,VV,yellow_model_water_outside_UNOSAT,345104,-11.277,-4.521,1.812,61.49
+Oct_minus_Sep11,VV,gray_neither,949054,-4.215,0.047,4.379,17.51
+Oct_minus_Sep11,VH,green_UNOSAT_flood_and_model_water,97616,-14.571,-8.646,-1.71,85.31
+Oct_minus_Sep11,VH,red_UNOSAT_flood_not_model_water,2807,-9.081,-3.548,1.221,55.86
+Oct_minus_Sep11,VH,yellow_model_water_outside_UNOSAT,345104,-12.648,-6.184,0.107,73.81
+Oct_minus_Sep11,VH,gray_neither,949054,-5.232,-0.785,3.164,25.11

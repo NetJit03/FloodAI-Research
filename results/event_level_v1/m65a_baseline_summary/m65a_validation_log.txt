@@ -1,0 +1,5 @@
+Source: results/event_level_v1/cross_event_reliability/cross_event_reliability_summary.csv
+Fixed threshold: 0.5 (from prior model/checkpoint logs; verify in checkpoint if needed)
+PASS prior TEST metric consistency: results/event_level_v1/fold_01_india/evaluation/evaluation_summary.csv
+PASS prior TEST metric consistency: results/event_level_v1/fold_02_paraguay/evaluation/evaluation_summary.csv
+PASS prior TEST metric consistency: results/event_level_v1/fold_03_ghana/evaluation/evaluation_summary.csv

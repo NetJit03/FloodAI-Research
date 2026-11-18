@@ -1,0 +1,29 @@
+{
+  "status": "VISUALLY_REVIEWED",
+  "slides": 26,
+  "canvas": "16:9",
+  "renderer": "LibreOffice 26.8.3, headless with explicit Tahoma Fontconfig",
+  "rasterizer": "macOS PDFKit 1536 x 864",
+  "review": "All 26 draft pages reviewed individually. All pages with changed visible content reviewed individually again after repair. All 26 final pages scanned in final contact sheets. Final slide 20 caption reviewed individually after its local edit.",
+  "native_powerpoint_inspected": false,
+  "limitation": "The final revised deck was not opened directly in Microsoft PowerPoint. Earlier native application control was unresponsive.",
+  "notes_only_final_edit": "All 91 visual XML/media/relationship parts are byte-identical to the rendered version after the final notes/metadata edit.",
+  "structural_validation": "validation.json: 187 checks, PASS; integrity/layout finding_count=0, warning_count=0",
+  "files": [
+    {
+      "path": "/Users/netinho/Projects/FloodAI-Research/presentation/output/FloodAI_Research_Revised26_TH_Final.pptx",
+      "bytes": 1734219,
+      "sha256": "e94632cd734dc3595d435b5ae5c7177de153b419f905babcbb380aa766b61db9"
+    },
+    {
+      "path": "/Users/netinho/Projects/FloodAI-Research/presentation/output/FloodAI_Research_Revised26_TH_Final.pdf",
+      "bytes": 1430074,
+      "sha256": "d3771444cce5ae369c03ef30c803b90adf90a7752a5dc898032f9f2ace47883d"
+    },
+    {
+      "path": "/Users/netinho/Projects/FloodAI-Research/presentation/plan_v2/SPEAKER_GUIDE_26_TH.md",
+      "bytes": 41269,
+      "sha256": "60b9aa45530b014f5573cef042db158545451f35a33828485219c26899b74fcf"
+    }
+  ]
+}

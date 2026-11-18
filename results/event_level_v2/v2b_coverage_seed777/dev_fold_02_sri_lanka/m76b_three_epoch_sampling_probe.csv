@@ -1,0 +1,16 @@
+probe_epoch,bin,draws,unique_chips
+1,zero_water,19,10
+1,water_0_to_1pct,45,30
+1,water_1_to_10pct,62,45
+1,water_10_to_50pct,48,28
+1,water_ge_50pct,27,13
+2,zero_water,25,12
+2,water_0_to_1pct,45,33
+2,water_1_to_10pct,65,44
+2,water_10_to_50pct,40,24
+2,water_ge_50pct,26,12
+3,zero_water,28,11
+3,water_0_to_1pct,49,34
+3,water_1_to_10pct,49,41
+3,water_10_to_50pct,47,26
+3,water_ge_50pct,28,12

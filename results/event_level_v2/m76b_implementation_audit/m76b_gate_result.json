@@ -1,0 +1,63 @@
+{
+  "status": "PASS_M76B_READY_FOR_M76C_FULL_TRAIN",
+  "design_fingerprint": "0e5789c5fd2e8a8e7d152af8d9e61b4ad347c2933212f7c3bbe0c838ac25418c",
+  "baseline_trainer_sha256": "818a30be6880171509cc721f5436a5500d8b778997ec8f45991636569cae2a55",
+  "v2b_trainer_sha256": "0cd0fbfd83d3de2f680ae21e21e1067769cdd31b3de6323d45d5aa407f7ff8ee",
+  "folds": [
+    {
+      "fold": "dev_fold_01_usa",
+      "train_count": 174,
+      "seed_smoke": 42,
+      "real_batch_shape": [
+        2,
+        2,
+        256,
+        256
+      ],
+      "sampler_bins": {
+        "zero_water": 14,
+        "water_0_to_1pct": 38,
+        "water_1_to_10pct": 70,
+        "water_10_to_50pct": 36,
+        "water_ge_50pct": 16
+      }
+    },
+    {
+      "fold": "dev_fold_02_sri_lanka",
+      "train_count": 201,
+      "seed_smoke": 42,
+      "real_batch_shape": [
+        2,
+        2,
+        256,
+        256
+      ],
+      "sampler_bins": {
+        "zero_water": 12,
+        "water_0_to_1pct": 55,
+        "water_1_to_10pct": 80,
+        "water_10_to_50pct": 40,
+        "water_ge_50pct": 14
+      }
+    },
+    {
+      "fold": "dev_fold_03_spain",
+      "train_count": 213,
+      "seed_smoke": 42,
+      "real_batch_shape": [
+        2,
+        2,
+        256,
+        256
+      ],
+      "sampler_bins": {
+        "zero_water": 14,
+        "water_0_to_1pct": 59,
+        "water_1_to_10pct": 85,
+        "water_10_to_50pct": 42,
+        "water_ge_50pct": 13
+      }
+    }
+  ],
+  "warning": "No optimizer training in M7.6B; independent TEST not accessed."
+}

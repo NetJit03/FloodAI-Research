@@ -1,0 +1,5 @@
+split,images,evaluable_pixels,water_pixels,water_fraction,ignore_pixels,zero_evaluable_images,errors,review
+bolivia,15,2824434,451901,0.159997,1064345,0,0,0
+test,90,20443959,2515008,0.12302,3075593,2,0,9
+train,252,57279257,5446678,0.09509,8756881,1,0,35
+valid,89,20274154,2231206,0.110052,3036091,3,0,12

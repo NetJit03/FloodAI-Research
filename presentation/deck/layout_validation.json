@@ -1,0 +1,23 @@
+{
+  "finding_count": 0,
+  "findings": [],
+  "font_policy": {
+    "checked_text_script_count": 437,
+    "native_font_rendering_verified": false,
+    "observed_font_families": [
+      "Tahoma"
+    ],
+    "observed_font_use_counts": {
+      "Tahoma": 437
+    },
+    "passed": true,
+    "performed": true
+  },
+  "slide_count": 18,
+  "slide_size_in": [
+    13.3333,
+    7.5
+  ],
+  "warning_count": 0,
+  "warnings": []
+}

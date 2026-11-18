@@ -1,0 +1,56 @@
+{
+  "status": "PARTIAL_DEV_ONLY",
+  "created_utc": "2026-11-16T07:19:57.417803+00:00",
+  "method": "Baseline SmallUNet Deep Ensemble, independent seeds within each fold",
+  "seeds": [
+    42,
+    123,
+    777
+  ],
+  "folds": [
+    "dev_fold_02_sri_lanka"
+  ],
+  "device": "mps",
+  "threshold": 0.5,
+  "frozen_baseline_fingerprint": "dff29456bb921df80dc4d6afd91b266eb830f04092a28c14fd0870a9806a2529",
+  "macro_iou_3_dev_events": null,
+  "source_script": "m80a_dev_ensemble_uq.py",
+  "source_script_sha256": "dc24214de3fb64567dfb63496fe2f9fb3275bf2f1a6540320f86f5fb6a33d0e1",
+  "entropy_units": "bits (normalized binary entropy)",
+  "mutual_information": "H(mean p) - mean H(p_m); nonnegative numerical clamp",
+  "variance_units": "probability squared, ddof=0",
+  "interpretation": "ensemble disagreement proxy; NOT guaranteed calibrated risk or exact epistemic uncertainty",
+  "evaluation": "DEV validation only; same fold, 3 independent training seeds",
+  "data_exclusion": "India/Paraguay/Ghana TEST, Bolivia and Thailand NEVER accessed",
+  "no_fitting": true,
+  "no_recalibration": true,
+  "no_threshold_search": true,
+  "warning": "DEV events previously inspected and used for model planning; not pristine independent tests",
+  "per_event_results": [
+    {
+      "fold": "dev_fold_02_sri_lanka",
+      "validation_event": "Sri-Lanka",
+      "n_images": 3,
+      "expected_images": 42,
+      "full_validation": false,
+      "valid_pixels": 714519,
+      "gt_water_pixels": 23647,
+      "gt_water_fraction": 0.03309499117588196,
+      "tp": 6352,
+      "tn": 681678,
+      "fp": 9194,
+      "fn": 17295,
+      "iou": 0.19341676562833043,
+      "f1": 0.3241395147092593,
+      "precision": 0.4085938505081693,
+      "recall": 0.26861758362582994,
+      "brier": 0.036525031441393935,
+      "mean_predictive_entropy_bits": 0.48783527188501735,
+      "mean_member_entropy_bits": 0.4653945541651497,
+      "mean_mutual_information_bits": 0.022440717710288872,
+      "mean_probability_variance": 0.0031421580743265045,
+      "fn_p_lt_0_1_count": 729,
+      "fn_p_lt_0_1_share_of_gt_water": 0.03082843489660422
+    }
+  ]
+}

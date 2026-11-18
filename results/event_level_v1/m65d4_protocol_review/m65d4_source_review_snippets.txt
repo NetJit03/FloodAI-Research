@@ -1,0 +1,78 @@
+===== TRAINER: manual review snippets =====
+37: DB_MIN = np.array([-35.0, -40.0], dtype=np.float32)[:, None, None]   # VV, VH
+38: DB_MAX = np.array([5.0, 0.0], dtype=np.float32)[:, None, None]
+99:     def __init__(self, records, crop_size=256, augment=False):
+101:         self.crop_size = crop_size if augment else None
+114:             if src.nodata is not None and np.isfinite(src.nodata):
+115:                 valid_image &= np.all(x != src.nodata, axis=0)
+123:         valid = (y != -1) & valid_image
+125:         x = np.nan_to_num(x, nan=-40.0, posinf=5.0, neginf=-40.0)
+126:         x = np.clip(x, DB_MIN, DB_MAX)
+127:         x = (x-DB_MIN)/(DB_MAX-DB_MIN)
+133:             k = self.crop_size
+140:             valid = valid[r:r+k, c:c+k]
+144:                 valid = np.flip(valid, axis=1)
+148:                 valid = np.flip(valid, axis=0)
+152:             valid = np.rot90(valid, rotation)
+201: def masked_bce_dice(logits, y, valid):
+202:     valid = valid.to(dtype=logits.dtype)
+206:     p = torch.sigmoid(logits)*valid
+213: def evaluate(model, loader, device, threshold=.5):
+219:         loss = masked_bce_dice(logits, y, v)
+220:         pred = torch.sigmoid(logits) >= threshold
+222:         valid = v.bool()
+253:     p.add_argument('--patience', type=int, default=6)
+263:     if a.batch_size < 1 or a.crop_size < 32 or a.epochs < 1:
+273:             train_recs, crop_size=a.crop_size, augment=True)[0]
+288:     train = DataLoader(SarWaterDataset(train_recs, a.crop_size, True), batch_size=a.batch_size,
+290:     valid = DataLoader(SarWaterDataset(val_recs, augment=False), batch_size=1,
+311:                 loss = masked_bce_dice(logits, y, v)
+327:                         'db_min': [-35.0, -40.0], 'db_max': [5.0, 0.0],
+329:                         'threshold': .5, 'epoch': epoch, 'validation_metrics': metric,
+334:                 if bad >= a.patience:
+336:                         f'Early stopping after {a.patience} epochs without improved validation IoU.')
+339:               'device': device, 'db_min': [-35, -40], 'db_max': [5, 0],
+
+===== EVALUATOR: manual review snippets =====
+9:       --checkpoint results/sar_unet_baseline_v1/best_sar_unet.pt \
+13: Both official test and Bolivia are evaluated at the fixed checkpoint threshold
+14: (usually 0.5); do not choose a new threshold using test results.
+18:     SmallUNet, SarWaterDataset, masked_bce_dice, split_records, DB_MIN, DB_MAX
+83:                  valid: np.ndarray, prob: np.ndarray, threshold: float):
+85:     prediction = prob >= threshold
+98:     fig.suptitle(f'{name}  |  fixed threshold = {threshold:.2f}', fontsize=12)
+106:     ax[1, 0].set_title('Model predicted water (thresholded)')
+125:                    threshold: float, outdir: Path, npreviews: int) -> dict:
+149:             probabilities = torch.sigmoid(logits).cpu().numpy()[0, 0]
+150:             loss = float(masked_bce_dice(
+156:             pr = probabilities >= threshold
+175:                              x_np, y_np, v_np, probabilities, threshold)
+208:     p.add_argument('--checkpoint', type=Path,
+220:     if not args.checkpoint.is_file():
+221:         p.error(f'Checkpoint not found: {args.checkpoint}')
+223:     checkpoint = torch.load(
+224:         args.checkpoint, map_location='cpu', weights_only=True)
+225:     if checkpoint.get('architecture') != 'SmallUNet':
+226:         raise ValueError('Checkpoint architecture is not SmallUNet')
+227:     base = int(checkpoint['base_channels'])
+228:     threshold = float(checkpoint.get('threshold', .5))
+229:     if not (0 < threshold < 1):
+230:         raise ValueError('Invalid checkpoint threshold')
+231:     stored_min = np.asarray(checkpoint.get(
+232:         'db_min', [-35, -40]), dtype=float).ravel()
+233:     stored_max = np.asarray(checkpoint.get(
+234:         'db_max', [5, 0]), dtype=float).ravel()
+235:     if not (np.allclose(stored_min, DB_MIN.ravel()) and np.allclose(stored_max, DB_MAX.ravel())):
+237:             'Checkpoint normalization != train_sar_unet.py normalization')
+239:     model.load_state_dict(checkpoint['model_state'], strict=True)
+243:     print('Checkpoint:', args.checkpoint)
+244:     print('Selected epoch:', checkpoint.get('epoch'))
+246:     print('Fixed threshold (from checkpoint):', threshold)
+253:         results.append(evaluate_split(model, records, split, device, threshold,
+256:         'model_checkpoint': str(args.checkpoint),
+257:         'model_epoch': checkpoint.get('epoch'),
+258:         'fixed_threshold': threshold,
+259:         'normalization_db_min': stored_min.tolist(),
+260:         'normalization_db_max': stored_max.tolist(),
+275:     print('NOTE: Do not select a new threshold using these test results.')
+

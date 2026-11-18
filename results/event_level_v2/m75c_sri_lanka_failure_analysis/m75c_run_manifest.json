@@ -1,0 +1,30 @@
+{
+  "status": "DEV_ONLY",
+  "event": "Sri Lanka",
+  "n_images": 42,
+  "seeds": [
+    42,
+    123,
+    777
+  ],
+  "methods": [
+    "baseline",
+    "v2a"
+  ],
+  "threshold": 0.5,
+  "checkpoints": {
+    "baseline seed=42": "results/event_level_v2/baseline_seed42/dev_fold_02_sri_lanka/best_sar_unet.pt",
+    "v2a seed=42": "results/event_level_v2/v2a_eventbalanced_seed42/dev_fold_02_sri_lanka/best_sar_unet.pt",
+    "baseline seed=123": "results/event_level_v2/baseline_seed123/dev_fold_02_sri_lanka/best_sar_unet.pt",
+    "v2a seed=123": "results/event_level_v2/v2a_eventbalanced_seed123/dev_fold_02_sri_lanka/best_sar_unet.pt",
+    "baseline seed=777": "results/event_level_v2/baseline_seed777/dev_fold_02_sri_lanka/best_sar_unet.pt",
+    "v2a seed=777": "results/event_level_v2/v2a_eventbalanced_seed777/dev_fold_02_sri_lanka/best_sar_unet.pt"
+  },
+  "v2a_missing_run_config": [
+    "/Users/netinho/Projects/FloodAI-Research/results/event_level_v2/v2a_eventbalanced_seed42/dev_fold_02_sri_lanka",
+    "/Users/netinho/Projects/FloodAI-Research/results/event_level_v2/v2a_eventbalanced_seed123/dev_fold_02_sri_lanka",
+    "/Users/netinho/Projects/FloodAI-Research/results/event_level_v2/v2a_eventbalanced_seed777/dev_fold_02_sri_lanka"
+  ],
+  "test_accessed": false,
+  "model_trained": false
+}

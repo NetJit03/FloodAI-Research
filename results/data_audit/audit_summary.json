@@ -1,0 +1,87 @@
+{
+  "dataset": "Sen1Floods11 HandLabeled SAR+Label",
+  "split_counts": {
+    "train": 252,
+    "valid": 89,
+    "test": 90,
+    "bolivia": 15
+  },
+  "image_pairs_audited": 446,
+  "data_integrity_issues": [],
+  "image_read_or_grid_errors": [],
+  "zero_evaluable_images": [
+    {
+      "image_id": "Ghana_26376",
+      "split": "train"
+    },
+    {
+      "image_id": "Ghana_5079",
+      "split": "valid"
+    },
+    {
+      "image_id": "Ghana_234935",
+      "split": "valid"
+    },
+    {
+      "image_id": "Ghana_277",
+      "split": "valid"
+    },
+    {
+      "image_id": "Ghana_83483",
+      "split": "test"
+    },
+    {
+      "image_id": "Paraguay_34417",
+      "split": "test"
+    }
+  ],
+  "potential_cross_split_bbox_overlaps": 0,
+  "event_names_by_split": {
+    "train": [
+      "Cambodia",
+      "Ghana",
+      "India",
+      "Nigeria",
+      "Pakistan",
+      "Paraguay",
+      "Somalia",
+      "Spain",
+      "Sri-Lanka",
+      "USA"
+    ],
+    "valid": [
+      "Cambodia",
+      "Ghana",
+      "India",
+      "Nigeria",
+      "Pakistan",
+      "Paraguay",
+      "Somalia",
+      "Spain",
+      "Sri-Lanka",
+      "USA"
+    ],
+    "test": [
+      "Cambodia",
+      "Ghana",
+      "India",
+      "Nigeria",
+      "Pakistan",
+      "Paraguay",
+      "Somalia",
+      "Spain",
+      "Sri-Lanka",
+      "USA"
+    ],
+    "bolivia": [
+      "Bolivia"
+    ]
+  },
+  "readiness": "INTEGRITY_CHECK_PASSED_REVIEW_WARNINGS",
+  "limitations": [
+    "Cannot prove hand annotation correctness or semantic label quality.",
+    "Bbox overlap screen is only a flag; does not prove leakage or duplication.",
+    "Train/validation/test from the same event are not independent event-level holdouts.",
+    "Zero-evaluable chips must not contribute segmentation metrics or supervised loss."
+  ]
+}

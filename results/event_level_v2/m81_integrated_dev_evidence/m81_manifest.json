@@ -1,0 +1,23 @@
+{
+  "status": "DESCRIPTIVE_DEV_INTEGRATION_COMPLETE",
+  "input_source": "BUNDLED_REFERENCE_SNAPSHOTS",
+  "no_training": true,
+  "no_inference": true,
+  "no_test": true,
+  "full_dev_images": 141,
+  "selected_preview_images": 9,
+  "macro_baseline_single_model": 0.6143297025463857,
+  "macro_baseline_deep_ensemble": 0.6483334083463912,
+  "baseline_ensemble_delta": 0.034003705800005446,
+  "frozen_baseline_fingerprint": "dff29456bb921df80dc4d6afd91b266eb830f04092a28c14fd0870a9806a2529",
+  "sources": {
+    "m76d/m76d_model_summary.csv": "8f83e0175ef0d7cf0021b02fed4a4dca24a27289227d9961ab7c5b8406bc7ef9",
+    "m76d/m76d_event_summary.csv": "2695a63fa4b192066e7f7dd617f29a89f4eccdfa14540ea45929704b45621eb8",
+    "m76d/m76d_macro_by_seed.csv": "168c3f52746ccb8d2190d60366284507103d3a5aaafe14016bf4f7ede64c7be8",
+    "m80a/m80a_dev_by_event.csv": "49f8b1156bca55d4cdb2d4a00521135503b7eb3ff429761ba4db2e483a0fc823",
+    "m80b/m80b_image_level_diagnostics.csv": "0698c27be894950d6a4198a1f9041a9ee60f7c75391f05537a1ac1a91c95c43d",
+    "m80b/m80b_selected_preview_by_event.csv": "4866e614ac121aba0229580e33b2b4f8120b16d506865f227bfa1186c1ed47b9",
+    "m80b/m80b_image_level_correlations.csv": "e1a66241f6b242a9a69f540d62802d469a53edbdb0c516ae934062060e5be353",
+    "m80a/m80a_manifest.json": "0890a8041e476870eb371c514dfe686d8062de291ccc12a15c81b49e3cd967c4"
+  }
+}

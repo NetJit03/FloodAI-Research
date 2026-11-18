@@ -1,0 +1,4 @@
+event,selected_images,selected_only_ece_15_bins,selected_only_entropy_top10pct_error_capture,selected_only_mi_top10pct_error_capture,not_full_dev_ece
+USA,3,0.15102957216470986,0.8240955266440919,0.024238103724826234,True
+Sri Lanka,3,0.3090189914616333,0.48688941506621064,0.11523283346487766,True
+Spain,3,0.01947560694568667,0.4637719765583378,0.3453797430888534,True

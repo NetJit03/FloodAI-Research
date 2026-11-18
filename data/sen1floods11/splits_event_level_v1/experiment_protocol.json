@@ -1,0 +1,121 @@
+{
+  "created_utc": "2026-11-02T04:16:53.278196+00:00",
+  "source": "data/sen1floods11/splits_verified",
+  "verified_input_counts": {
+    "train": 251,
+    "valid": 86,
+    "test": 88,
+    "bolivia": 15
+  },
+  "source_event_counts": {
+    "Cambodia": 30,
+    "Ghana": 48,
+    "India": 68,
+    "Nigeria": 18,
+    "Pakistan": 28,
+    "Paraguay": 66,
+    "Somalia": 26,
+    "Spain": 30,
+    "Sri-Lanka": 42,
+    "USA": 69
+  },
+  "folds": [
+    {
+      "fold": "fold_01_india",
+      "test_event": "India",
+      "validation_event": "USA",
+      "training_events": [
+        "Cambodia",
+        "Ghana",
+        "Nigeria",
+        "Pakistan",
+        "Paraguay",
+        "Somalia",
+        "Spain",
+        "Sri-Lanka"
+      ],
+      "image_counts": {
+        "train": 288,
+        "valid": 69,
+        "test": 68
+      },
+      "bolivia_locked_images": 15,
+      "event_overlap": false,
+      "chip_overlap": false,
+      "output_sha256": {
+        "flood_train_data.csv": "856ef91c2fbe256fca2815cf67d34d2721de35195b5035dbebca935ea65ae506",
+        "flood_valid_data.csv": "d70376131698cda7bbe7ea7701fff3d0d8cd920e1fb01b49a3da143578566e18",
+        "flood_test_data.csv": "6b22eb78862c7801596a14588b5991ae6e1346e0912c2d8919fa4478e24073c1",
+        "flood_bolivia_data_LOCKED.csv": "4775d100fae1f1ca66a842b8af6d2a97b8bfc5847f29d88ff0affff2c1e22768"
+      },
+      "note": "Do not use this fold's test event or Bolivia for training, validation, early stopping, or threshold selection."
+    },
+    {
+      "fold": "fold_02_paraguay",
+      "test_event": "Paraguay",
+      "validation_event": "Sri-Lanka",
+      "training_events": [
+        "Cambodia",
+        "Ghana",
+        "India",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "USA"
+      ],
+      "image_counts": {
+        "train": 317,
+        "valid": 42,
+        "test": 66
+      },
+      "bolivia_locked_images": 15,
+      "event_overlap": false,
+      "chip_overlap": false,
+      "output_sha256": {
+        "flood_train_data.csv": "a7a513525dbbef562f51c6cb508e04aeebbd16e21301238afcd996933aff6ec0",
+        "flood_valid_data.csv": "9010e07b4cc8617d8918ce46373638c9cb2fa1a45abd3975b67a897a263495f5",
+        "flood_test_data.csv": "16c18974d3e774d183c0bb88d5b1cabdb43dbd80cec0ece853c8806acee054c9",
+        "flood_bolivia_data_LOCKED.csv": "4775d100fae1f1ca66a842b8af6d2a97b8bfc5847f29d88ff0affff2c1e22768"
+      },
+      "note": "Do not use this fold's test event or Bolivia for training, validation, early stopping, or threshold selection."
+    },
+    {
+      "fold": "fold_03_ghana",
+      "test_event": "Ghana",
+      "validation_event": "Spain",
+      "training_events": [
+        "Cambodia",
+        "India",
+        "Nigeria",
+        "Pakistan",
+        "Paraguay",
+        "Somalia",
+        "Sri-Lanka",
+        "USA"
+      ],
+      "image_counts": {
+        "train": 347,
+        "valid": 30,
+        "test": 48
+      },
+      "bolivia_locked_images": 15,
+      "event_overlap": false,
+      "chip_overlap": false,
+      "output_sha256": {
+        "flood_train_data.csv": "5c2b69a829755b025788b06fff505112f539d80ef889809ec91b44fee0918039",
+        "flood_valid_data.csv": "cc794387faf478a5dc1a9d10d1954d27e9869012f563f9b2574dbd33124362f4",
+        "flood_test_data.csv": "d4fcd6de81017cb468a1c0cd90c658a150f18cae4f9e2d5f53b932ce1ef96829",
+        "flood_bolivia_data_LOCKED.csv": "4775d100fae1f1ca66a842b8af6d2a97b8bfc5847f29d88ff0affff2c1e22768"
+      },
+      "note": "Do not use this fold's test event or Bolivia for training, validation, early stopping, or threshold selection."
+    }
+  ],
+  "research_protocol": [
+    "Prespecify architecture, preprocessing, loss, training budget and threshold-selection rules.",
+    "Train a fresh model per fold; choose checkpoint and threshold using only that fold's validation event.",
+    "Report fixed-model performance on each fold's held-out source event, separately from Bolivia and Thailand.",
+    "Bolivia is a previously examined holdout, not a newly blinded external test.",
+    "Thailand Phimai is a diagnostic pilot with non-equivalent UNOSAT flood reference, not a surface-water IoU test."
+  ]
+}

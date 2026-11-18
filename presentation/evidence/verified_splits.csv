@@ -1,0 +1,4 @@
+fold,validation_event,train_count,valid_count,test_stub_count,bolivia_stub_count,train_events
+dev_fold_01_usa,USA,174,69,0,0,Mekong;Nigeria;Pakistan;Somalia;Spain;Sri-Lanka
+dev_fold_02_sri_lanka,Sri-Lanka,201,42,0,0,Mekong;Nigeria;Pakistan;Somalia;Spain;USA
+dev_fold_03_spain,Spain,213,30,0,0,Mekong;Nigeria;Pakistan;Somalia;Sri-Lanka;USA

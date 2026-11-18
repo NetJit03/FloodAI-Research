@@ -1,0 +1,66 @@
+{
+  "status": "DEV_ROOTS_PREPARED_NOT_TRAINED",
+  "source_data_root": "/Users/netinho/Projects/FloodAI-Research/data/sen1floods11",
+  "manifest_root": "/Users/netinho/Projects/FloodAI-Research/results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests",
+  "output_root": "/Users/netinho/Projects/FloodAI-Research/data/sen1floods11/v2_development_roots",
+  "warning": "test/bolivia CSVs are EMPTY compatibility stubs. Do NOT evaluate on these folders.",
+  "folds": [
+    {
+      "fold": "dev_fold_01_usa",
+      "train": 174,
+      "valid": 69,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "Sri-Lanka"
+      ],
+      "valid_events": [
+        "USA"
+      ],
+      "source_train_csv": "/Users/netinho/Projects/FloodAI-Research/results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests/dev_fold_01_usa/flood_train_data.csv",
+      "source_valid_csv": "/Users/netinho/Projects/FloodAI-Research/results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests/dev_fold_01_usa/flood_valid_data.csv",
+      "data_root": "/Users/netinho/Projects/FloodAI-Research/data/sen1floods11/v2_development_roots/dev_fold_01_usa"
+    },
+    {
+      "fold": "dev_fold_02_sri_lanka",
+      "train": 201,
+      "valid": 42,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "USA"
+      ],
+      "valid_events": [
+        "Sri-Lanka"
+      ],
+      "source_train_csv": "/Users/netinho/Projects/FloodAI-Research/results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests/dev_fold_02_sri_lanka/flood_train_data.csv",
+      "source_valid_csv": "/Users/netinho/Projects/FloodAI-Research/results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests/dev_fold_02_sri_lanka/flood_valid_data.csv",
+      "data_root": "/Users/netinho/Projects/FloodAI-Research/data/sen1floods11/v2_development_roots/dev_fold_02_sri_lanka"
+    },
+    {
+      "fold": "dev_fold_03_spain",
+      "train": 213,
+      "valid": 30,
+      "train_events": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Sri-Lanka",
+        "USA"
+      ],
+      "valid_events": [
+        "Spain"
+      ],
+      "source_train_csv": "/Users/netinho/Projects/FloodAI-Research/results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests/dev_fold_03_spain/flood_train_data.csv",
+      "source_valid_csv": "/Users/netinho/Projects/FloodAI-Research/results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests/dev_fold_03_spain/flood_valid_data.csv",
+      "data_root": "/Users/netinho/Projects/FloodAI-Research/data/sen1floods11/v2_development_roots/dev_fold_03_spain"
+    }
+  ]
+}

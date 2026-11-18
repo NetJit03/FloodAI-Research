@@ -1,0 +1,92 @@
+{
+  "model_checkpoint": "results/sar_unet_baseline_v1/best_sar_unet.pt",
+  "model_epoch": 12,
+  "fixed_threshold": 0.5,
+  "normalization_db_min": [
+    -35.0,
+    -40.0
+  ],
+  "normalization_db_max": [
+    5.0,
+    0.0
+  ],
+  "device": "mps",
+  "note": "No model fitting. Bolivia is one held-out geographic event. Official test and training contain chips from shared event sites. Neither is Thailand external validation.",
+  "results": [
+    {
+      "split": "test",
+      "n_images": 90,
+      "n_evaluated_images": 88,
+      "n_skipped_images": 2,
+      "skipped_images": [
+        {
+          "split": "test",
+          "name": "Ghana_83483_S1Hand.tif",
+          "site_prefix": "Ghana",
+          "reason": "zero_valid_pixels_after_label_and_sar_mask"
+        },
+        {
+          "split": "test",
+          "name": "Paraguay_34417_S1Hand.tif",
+          "site_prefix": "Paraguay",
+          "reason": "zero_valid_pixels_after_label_and_sar_mask"
+        }
+      ],
+      "n_site_prefixes": 10,
+      "aggregate_counts": {
+        "tp": 1951231,
+        "tn": 17398599,
+        "fp": 530352,
+        "fn": 563777,
+        "valid_pixels": 20443959,
+        "brier_sum": 883012.9968577495
+      },
+      "micro_metrics": {
+        "iou": 0.6407226075078152,
+        "f1": 0.7810249027787145,
+        "precision": 0.7862848028858999,
+        "recall": 0.7758349078810087,
+        "accuracy": 0.9464815498798447,
+        "water_fraction_gt": 0.12301961669948565,
+        "water_fraction_pred": 0.12138465939987456,
+        "brier_score": 0.0431918786795527
+      },
+      "mean_image_iou_nonempty_union": 0.37042912625788144,
+      "mean_site_iou": 0.6184055801616194,
+      "mean_image_loss": 0.3977556892416694,
+      "images_with_zero_gt_water": 6,
+      "images_with_zero_union": 2
+    },
+    {
+      "split": "bolivia",
+      "n_images": 15,
+      "n_evaluated_images": 15,
+      "n_skipped_images": 0,
+      "skipped_images": [],
+      "n_site_prefixes": 1,
+      "aggregate_counts": {
+        "tp": 320453,
+        "tn": 2328223,
+        "fp": 44310,
+        "fn": 131448,
+        "valid_pixels": 2824434,
+        "brier_sum": 139760.5387802798
+      },
+      "micro_metrics": {
+        "iou": 0.6457998714256636,
+        "f1": 0.7847854197074929,
+        "precision": 0.8785238634400967,
+        "recall": 0.7091221307321737,
+        "accuracy": 0.9377723111958006,
+        "water_fraction_gt": 0.1599970117906809,
+        "water_fraction_pred": 0.12914552083709516,
+        "brier_score": 0.049482671140582433
+      },
+      "mean_image_iou_nonempty_union": 0.4242867084895981,
+      "mean_site_iou": 0.6457998714256636,
+      "mean_image_loss": 0.37291824420293174,
+      "images_with_zero_gt_water": 0,
+      "images_with_zero_union": 0
+    }
+  ]
+}

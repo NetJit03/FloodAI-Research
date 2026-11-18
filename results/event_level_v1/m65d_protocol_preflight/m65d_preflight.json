@@ -1,0 +1,172 @@
+{
+  "generated_utc": "2026-11-15T15:56:35.315440+00:00",
+  "source_root": "data/sen1floods11",
+  "study_stage": "M6.5D preflight; not a trained or evaluated V2",
+  "design": "Development events only. Historical V1 tests excluded from V2 dev training and model selection.",
+  "three_original_folds": {
+    "fold_01_india": {
+      "train": {
+        "n_images": 288,
+        "events": [
+          "Cambodia",
+          "Ghana",
+          "Nigeria",
+          "Pakistan",
+          "Paraguay",
+          "Somalia",
+          "Spain",
+          "Sri-Lanka"
+        ]
+      },
+      "valid": {
+        "n_images": 69,
+        "events": [
+          "USA"
+        ]
+      },
+      "test": {
+        "n_images": 68,
+        "events": [
+          "India"
+        ]
+      },
+      "bolivia": {
+        "n_images": 15,
+        "events": [
+          "Bolivia"
+        ]
+      }
+    },
+    "fold_02_paraguay": {
+      "train": {
+        "n_images": 317,
+        "events": [
+          "Cambodia",
+          "Ghana",
+          "India",
+          "Nigeria",
+          "Pakistan",
+          "Somalia",
+          "Spain",
+          "USA"
+        ]
+      },
+      "valid": {
+        "n_images": 42,
+        "events": [
+          "Sri-Lanka"
+        ]
+      },
+      "test": {
+        "n_images": 66,
+        "events": [
+          "Paraguay"
+        ]
+      },
+      "bolivia": {
+        "n_images": 15,
+        "events": [
+          "Bolivia"
+        ]
+      }
+    },
+    "fold_03_ghana": {
+      "train": {
+        "n_images": 347,
+        "events": [
+          "Cambodia",
+          "India",
+          "Nigeria",
+          "Pakistan",
+          "Paraguay",
+          "Somalia",
+          "Sri-Lanka",
+          "USA"
+        ]
+      },
+      "valid": {
+        "n_images": 30,
+        "events": [
+          "Spain"
+        ]
+      },
+      "test": {
+        "n_images": 48,
+        "events": [
+          "Ghana"
+        ]
+      },
+      "bolivia": {
+        "n_images": 15,
+        "events": [
+          "Bolivia"
+        ]
+      }
+    }
+  },
+  "development_event_counts": {
+    "Cambodia": 30,
+    "Nigeria": 18,
+    "Pakistan": 28,
+    "Somalia": 26,
+    "Spain": 30,
+    "Sri-Lanka": 42,
+    "USA": 69
+  },
+  "n_development_chips": 243,
+  "historically_inspected_test_events": [
+    "India",
+    "Paraguay",
+    "Ghana"
+  ],
+  "bolivia_status": "Not in three reported test sets, but previously inspected; not pristine prospective test",
+  "thailand_status": "Diagnostic pilot only; no independently validated surface-water ground truth",
+  "warnings": [],
+  "proposed_development_folds": [
+    {
+      "fold": "dev_fold_01_usa",
+      "train_images": 174,
+      "validation_images": 69,
+      "train_events": [
+        "Cambodia",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "Sri-Lanka"
+      ],
+      "validation_event": "USA",
+      "csv_dir": "results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests/dev_fold_01_usa"
+    },
+    {
+      "fold": "dev_fold_02_sri_lanka",
+      "train_images": 201,
+      "validation_images": 42,
+      "train_events": [
+        "Cambodia",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Spain",
+        "USA"
+      ],
+      "validation_event": "Sri-Lanka",
+      "csv_dir": "results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests/dev_fold_02_sri_lanka"
+    },
+    {
+      "fold": "dev_fold_03_spain",
+      "train_images": 213,
+      "validation_images": 30,
+      "train_events": [
+        "Cambodia",
+        "Nigeria",
+        "Pakistan",
+        "Somalia",
+        "Sri-Lanka",
+        "USA"
+      ],
+      "validation_event": "Spain",
+      "csv_dir": "results/event_level_v1/m65d_protocol_preflight/proposed_dev_manifests/dev_fold_03_spain"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "splits": {
+    "train": {
+      "original": 252,
+      "retained": 251,
+      "excluded": 1,
+      "output": "data/sen1floods11/splits_audited/flood_train_data.csv"
+    },
+    "valid": {
+      "original": 89,
+      "retained": 86,
+      "excluded": 3,
+      "output": "data/sen1floods11/splits_audited/flood_valid_data.csv"
+    },
+    "test": {
+      "original": 90,
+      "retained": 89,
+      "excluded": 1,
+      "output": "data/sen1floods11/splits_audited/flood_test_data.csv"
+    },
+    "bolivia": {
+      "original": 15,
+      "retained": 15,
+      "excluded": 0,
+      "output": "data/sen1floods11/splits_audited/flood_bolivia_data.csv"
+    }
+  },
+  "excluded": [
+    {
+      "split": "train",
+      "sar_image": "Ghana_26376_S1Hand.tif",
+      "label_image": "Ghana_26376_LabelHand.tif",
+      "reason": "no valid ground-truth pixels (label 0 or 1)"
+    },
+    {
+      "split": "valid",
+      "sar_image": "Ghana_5079_S1Hand.tif",
+      "label_image": "Ghana_5079_LabelHand.tif",
+      "reason": "no valid ground-truth pixels (label 0 or 1)"
+    },
+    {
+      "split": "valid",
+      "sar_image": "Ghana_234935_S1Hand.tif",
+      "label_image": "Ghana_234935_LabelHand.tif",
+      "reason": "no valid ground-truth pixels (label 0 or 1)"
+    },
+    {
+      "split": "valid",
+      "sar_image": "Ghana_277_S1Hand.tif",
+      "label_image": "Ghana_277_LabelHand.tif",
+      "reason": "no valid ground-truth pixels (label 0 or 1)"
+    },
+    {
+      "split": "test",
+      "sar_image": "Ghana_83483_S1Hand.tif",
+      "label_image": "Ghana_83483_LabelHand.tif",
+      "reason": "no valid ground-truth pixels (label 0 or 1)"
+    }
+  ]
+}

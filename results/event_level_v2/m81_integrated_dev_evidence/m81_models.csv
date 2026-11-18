@@ -1,0 +1,4 @@
+model,description,mean_of_seed_macro_dev_iou,sd_across_three_seed_macros,paired_delta_vs_baseline,scope
+baseline,Baseline U-Net,0.6143297025463857,0.05755119056370495,0.0,DEV_ONLY
+v2a_eventbalanced,V2-A Event-balanced,0.5979154642385853,0.045740560054730074,-0.016414238307800384,DEV_ONLY
+v2b_coverage,V2-B Water-coverage,0.587919012101517,0.04884912988786312,-0.02641069044486873,DEV_ONLY
